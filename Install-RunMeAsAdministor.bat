@@ -58,7 +58,19 @@ REM SETUP js Directory
 cd ../../js
 FOR %%G in (*) DO  mklink /H %var%js\%%G %%G
 FOR /d %%G in (*) DO  mklink /J %var%js\%%G %%G
+
+
+REM SETUP bin Directory
+cd ../bin
+FOR %%G in (*) DO  mklink /H %var%bin\%%G %%G
+FOR /d %%G in (*) DO  mklink /J %var%bin\%%G %%G
 cd ..
+
+REM SETUP THE MODULE INSTALLERS
+copy /Y Install\Module\* %var%Install\Module
+
+REM FINALLY Modify the Web.Config with the CodeSubDirectories
+powershell -file scripts\replace.ps1 -webConfig %var%web.config
 
 
 echo complete. Press any key to exit.
