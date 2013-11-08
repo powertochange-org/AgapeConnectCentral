@@ -66,11 +66,15 @@ FOR %%G in (*) DO  mklink /H %var%bin\%%G %%G
 FOR /d %%G in (*) DO  mklink /J %var%bin\%%G %%G
 cd ..
 
+REM SETUP the sso and Scripts Directory
+mklink /J %var%sso sso
+mklink /J %var%Scripts Scripts
+
 REM SETUP THE MODULE INSTALLERS
 copy /Y Install\Module\* %var%Install\Module
 
 REM FINALLY Modify the Web.Config with the CodeSubDirectories
-powershell -file scripts\replace.ps1 -webConfig %var%web.config
+powershell -file InstallScripts\replace.ps1 -webConfig %var%web.config
 
 
 echo complete. Press any key to exit.
