@@ -41,7 +41,7 @@ Namespace DotNetNuke.Modules.StaffAdmin
             'Label5.Text = CDate(UserController.GetUserById(PortalId, 7).Profile.GetPropertyValue("Birthday")).ToString("dd/MM/yyyy")
             ' tbTest.Text = CultureInfo.CurrentCulture.TwoLetterISOLanguageName
             'tbTest.Text = Left(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern, 8).ToLower
-            Dim auth As New DatatSync
+            ' Dim auth As New DatatSync
 
 
 

@@ -52,6 +52,7 @@
            <asp:Label ID="lblCompanyId" runat="server"></asp:Label>
         </td>
     </tr>
+     <asp:Panel ID="pnlDatapump" runat="server">
      <tr>
         <td width="200px"><b><dnn:label id="ttlPassword" runat="server" controlname="lblPassword" Text="Web Service Password:" HelpText="The datapump (installed on your Accounts server), uses a webservice to send and receive transactions. When you install the datapump, you will need to enter this password. This does not have to (and should not) be memorable."   /></b></td>
         <td>
@@ -69,7 +70,7 @@
            <asp:Label ID="lblStatus" runat="server"></asp:Label>
         </td>
     </tr>
-    
+    </asp:Panel>
  </table>
 
 
