@@ -33,6 +33,10 @@ float: left;
     padding-bottom: 4px;
 }
 
+form .dnn_mact > li > a {
+background-image: url(images/acActionMenu.png);
+}
+
 /*############## Menu Style ###############*/
 /* main menu td */
 .main_dnnmenu_bar 
