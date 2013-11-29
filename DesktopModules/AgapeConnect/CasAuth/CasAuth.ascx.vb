@@ -15,7 +15,7 @@ Imports GCX
 Namespace DotNetNuke.Modules.AgapePortal
     Partial Class CasAuth
         Inherits Entities.Modules.PortalModuleBase
-        Dim CASHOST As String = "https://thekey.me/cas/"
+        Dim CASHOST As String = "https://cas.powertochange.org/"
         Dim Service As String = ""
       
 
@@ -88,7 +88,7 @@ Namespace DotNetNuke.Modules.AgapePortal
 
                 ' Response.Redirect("https://thekey.me/cas/login.htm?service=" & Service & "&template=https://www.agape.org.uk/sso/template2.css")
 
-                Response.Redirect("https://thekey.me/cas/login.htm?service=" & Service)
+                Response.Redirect("https://cas.powertochange.org/login?service=" & Service)
 
 
             Else
@@ -133,20 +133,21 @@ Namespace DotNetNuke.Modules.AgapePortal
 
                 Dim firstName As String = String.Empty
                 Dim lastName As String = String.Empty
+                Dim email As String = String.Empty
                 Dim ssoGUID As String = String.Empty
                 Dim PGTIOU As String = String.Empty
 
                 If Not SuccessNode.SelectSingleNode("./cas:user", NamespaceMgr) Is Nothing Then
                     netid = SuccessNode.SelectSingleNode("./cas:user", NamespaceMgr).InnerText
                 End If
-                If Not SuccessNode.SelectSingleNode("./cas:attributes/firstName", NamespaceMgr) Is Nothing Then
-                    firstName = SuccessNode.SelectSingleNode("./cas:attributes/firstName", NamespaceMgr).InnerText
+                If Not SuccessNode.SelectSingleNode("./givenName", NamespaceMgr) Is Nothing Then
+                    firstName = SuccessNode.SelectSingleNode("./givenName", NamespaceMgr).InnerText.Replace("-", "").Trim()
                 End If
-                If Not SuccessNode.SelectSingleNode("./cas:attributes/lastName", NamespaceMgr) Is Nothing Then
-                    lastName = SuccessNode.SelectSingleNode("./cas:attributes/lastName", NamespaceMgr).InnerText
+                If Not SuccessNode.SelectSingleNode("./sn", NamespaceMgr) Is Nothing Then
+                    lastName = SuccessNode.SelectSingleNode("./sn", NamespaceMgr).InnerText.Replace("-", "").Trim()
                 End If
-                If Not SuccessNode.SelectSingleNode("./cas:attributes/ssoGuid", NamespaceMgr) Is Nothing Then
-                    ssoGUID = SuccessNode.SelectSingleNode("./cas:attributes/ssoGuid", NamespaceMgr).InnerText
+                If Not SuccessNode.SelectSingleNode("./mail", NamespaceMgr) Is Nothing Then
+                    email = SuccessNode.SelectSingleNode("./mail", NamespaceMgr).InnerText.Replace("-", "").Trim()
                 End If
                 If Not SuccessNode.SelectSingleNode("./cas:proxyGrantingTicket", NamespaceMgr) Is Nothing Then
 
@@ -161,19 +162,8 @@ Namespace DotNetNuke.Modules.AgapePortal
 
                     Response.Write("There was an error during login.")
                 Else
-                    'If netid = "jon@vellacott.co.uk" Then
-
-                    '    Response.Write(Server.HtmlEncode(doc.OuterXml))
-
-                    '    Response.Write("PGTIOU" & Session("PGTIOU"))
-                    '    Return
-                    'End If
-                    Dim email = netid
-
 
                     netid = netid & PS.PortalId
-
-
 
                     'For the public portal, we need to check if they are already registered.
 
