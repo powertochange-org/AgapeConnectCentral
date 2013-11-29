@@ -45,7 +45,7 @@ FOR /d %%G in (*) DO  mklink /J %var%Portals\_default\Skins\%%G %%G
 cd ..\Containers
 FOR /d %%G in (*) DO  mklink /J %var%Portals\_default\Containers\%%G %%G
 cd ..
-FOR %%G in (*) DO  mklink /H %var%Portals\_default\%%G %%G
+FOR %%G in (*) DO  mklink /H %var%Portals\_default\"%%G" "%%G"
 
 cd ../0
 IF NOT EXIST %var%Portals\0 ( 
