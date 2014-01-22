@@ -1,0 +1,12 @@
+.c_main{
+	width:1000px;
+	margin:auto;
+	margin-bottom:10px;
+	padding:10px;
+	border:solid 1px #000000;
+	border-radius:15px;
+}
+
+.c_right{
+	float:right;
+}
