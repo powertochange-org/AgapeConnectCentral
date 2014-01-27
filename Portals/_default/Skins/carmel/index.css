@@ -77,6 +77,7 @@ header td td{
 .dnn_dnnnav_ctldnnnav_spmsub{
 	margin:0 20px;
 	margin-top:6px;
+	z-index:5000;
 }
 
 .dnn_dnnnav_ctldnnnav_spmsub td{
@@ -136,6 +137,12 @@ footer .copy{
 #dnn_ctr548_StaffAdmin_FormView1_StaffChildren1_GridView1_LinkButton1{
 	background-color:#888888;
 	
+}
+
+.dnnFormMessage{
+	width:1000px;
+	margin:auto;
+	margin-bottom:10px;
 }
 
 .ui-dialog{
