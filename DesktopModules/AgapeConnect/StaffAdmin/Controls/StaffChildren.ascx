@@ -50,7 +50,7 @@
             </ItemTemplate>
             <FooterTemplate>
                   <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
-                    CommandName="myInsert" Text="Insert" ForeColor="White"></asp:LinkButton>
+                    CommandName="myInsert" Text="Insert"></asp:LinkButton>
             </FooterTemplate>
         </asp:TemplateField>
                        
@@ -67,7 +67,7 @@
             </td>
             <td>
                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
-                    CommandName="myInsertE" Text="Insert"  ForeColor="White" ></asp:LinkButton>
+                    CommandName="myInsertE" Text="Insert" ></asp:LinkButton>
             </td>
         </tr>
        </table>

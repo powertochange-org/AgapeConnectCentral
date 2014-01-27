@@ -3,6 +3,11 @@ a {
 	color:inherit;
 }
 
+.AgapeLink{
+	cursor:pointer;
+}
+
+
 body {
 	margin:0;
 }
@@ -121,10 +126,73 @@ footer .privacy:hover{
 footer .copy{
 	font-family: 'Open sans', sans-serif;
 	font-size:13px;
+}
+
+#dnn_ContentPane{
+	width:1000px;
+	margin:auto;
+}
+
+#dnn_ctr548_StaffAdmin_FormView1_StaffChildren1_GridView1_LinkButton1{
+	background-color:#888888;
+	
+}
+
+.ui-dialog{
+	z-index:10000;
+	background:white;
+	border:solid 1px #000000;
+	border-radius:15px;
+	padding:10px;
+}
+
+.ui-tabs-nav  {
+	list-style:none;
+}
+
+.ui-tabs-nav, .AcHdr  {
+	display:inline;
+	margin:0 10px;
+	padding:5px;
+	border-radius:5px;
+}
+
+.ui-state-default{
+	background-color:#f8f8f8;
+	padding:5px;
+	border-radius:5px;
+}
+
+.ui-state-active {
+	background-color:#bce7ff;
+	padding:5px;
+	border-radius:5px;
+	
+}
 
 
 
+/*li{
+	text-decoration:none;
+}*/
 
+.ui-state-hover{
+	text-decoration:underline;
+}
+
+.ui-state-error{
+	font-size:200%;
+	color:red;
+	line-height:100%;
+	border:red 5px dashed;
+	background:black;
+}
+
+.ui-accordion{
+	padding:10px;
+	border-radius:20px;
+	border:2px solid #000000;
+}
 
 
 

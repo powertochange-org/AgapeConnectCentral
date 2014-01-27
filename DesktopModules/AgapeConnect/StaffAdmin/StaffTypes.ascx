@@ -42,7 +42,7 @@ Use this page to add/edit Staff Types. Please note that it is not possible to de
             </ItemTemplate>
             <FooterTemplate>
                   <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
-                    CommandName="myinsert" Text="Insert" ForeColor="White"></asp:LinkButton>
+                    CommandName="myinsert" Text="Insert"></asp:LinkButton>
             </FooterTemplate>
         </asp:TemplateField>
     </Columns>
@@ -60,8 +60,8 @@ Use this page to add/edit Staff Types. Please note that it is not possible to de
        </table>
     </EmptyDataTemplate>
 
-    <FooterStyle BackColor="#660000" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#660000" Font-Bold="True" ForeColor="White" />
+    <FooterStyle BackColor="#660000" Font-Bold="True" />
+    <HeaderStyle BackColor="#660000" Font-Bold="True" />
     <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
     <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
     <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
