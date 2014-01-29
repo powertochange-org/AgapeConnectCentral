@@ -1,6 +1,11 @@
-a, a:visited {
+header a, header a:visited {
 	text-decoration:none;
 	color:inherit;
+}
+
+a, a:active, a:hover, a:focus{
+	text-decoration:none;
+	color:#0000ee;
 }
 
 a:hover{
@@ -196,6 +201,18 @@ footer .copy{
 	border: 2px solid;
 	background: #ffe4e4;
 	border-radius: 10px;
+}
+
+.ui-state-highlight{
+	font-style:italic;
+}
+
+.AgapeWarning{
+	color: #0000ee;
+	border: 2px solid;
+	border-radius: 10px;
+	background: #e4e4ff;
+	
 }
 
 .ui-accordion{
