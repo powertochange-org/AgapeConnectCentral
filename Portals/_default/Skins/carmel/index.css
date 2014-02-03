@@ -227,5 +227,9 @@ footer .copy{
 	border:1px solid #2989ff;
 }
 
-
+div.AcPane > div  > table > tbody{
+	display:block;
+	overflow:auto;
+	height:280;
+}
 
