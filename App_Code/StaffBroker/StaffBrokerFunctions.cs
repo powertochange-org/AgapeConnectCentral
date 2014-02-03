@@ -567,11 +567,23 @@ public class StaffBrokerFunctions
     {
 
         StaffBrokerDataContext d = new StaffBrokerDataContext();
-        var s = from c in d.AP_StaffBroker_LeaderMetas where c.LeaderId == LeaderId || c.DelegateId == LeaderId select c.User;
+        //--Modified to return subordinates in depth, and ignore delegations.
+        //var s = from c in d.AP_StaffBroker_LeaderMetas where c.LeaderId == LeaderId || c.DelegateId == LeaderId select c.User;
+        return GetTeamToDepthOf(LeaderId, 3);
 
+    }
 
-        return s.ToList();
-
+    static private List<User> GetTeamToDepthOf(int LeaderId, int Depth)
+    {
+        StaffBrokerDataContext d = new StaffBrokerDataContext();
+        var s = from c in d.AP_StaffBroker_LeaderMetas where c.LeaderId == LeaderId select c.User;
+        List<User> result = s.ToList<User>();
+        if (Depth > 0)
+        {
+            foreach (User u in from c in d.AP_StaffBroker_LeaderMetas where c.LeaderId == LeaderId select c.User)
+                result.AddRange(GetTeamToDepthOf(u.UserID, Depth - 1));
+        }
+        return result;
     }
 
     static public List<LeaderInfo> GetLeadersDetailed(int UserId, int PortalId)
