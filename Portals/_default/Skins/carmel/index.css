@@ -227,7 +227,8 @@ footer .copy{
 	border:1px solid #2989ff;
 }
 
-div.AcPane > div  > table > tbody, .dnn_ctr495_StaffRmb_tvProcessed{
+/*div.AcPane > div  > table > tbody, .dnn_ctr495_StaffRmb_tvProcessed{*/
+.ui-accordion-content{
 	display:block;
 	overflow:auto;
 	height:280;
