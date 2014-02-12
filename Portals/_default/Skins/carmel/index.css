@@ -250,6 +250,10 @@ footer .copy{
         margin: 0;
         display:block;
         z-index:1000;
+		border:1px solid #000000;
+		background-color:ffffff;
+		height:200px;
+		overflow:none;
 }
 .ui-menu .ui-menu {
         margin-top: -3px;
