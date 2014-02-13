@@ -251,9 +251,10 @@ footer .copy{
         display:block;
         z-index:1000;
 		border:1px solid #000000;
-		background-color:ffffff;
+		background-color:#ffffff;
 		height:200px;
-		overflow:none;
+        overflow-x:hidden;
+		overflow-y:scroll;
 }
 .ui-menu .ui-menu {
         margin-top: -3px;
