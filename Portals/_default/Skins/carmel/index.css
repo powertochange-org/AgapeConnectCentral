@@ -101,11 +101,6 @@ footer{
 	background:#0079c1;
 }
 
-.dnnLabel{
-	width:inherit;
-}
-
-
 footer .bottom{
 	width:1000px;
 	margin:0 auto;
@@ -191,8 +186,12 @@ footer .copy{
 	background-color:#0079c1;
 	padding:5px;
 	border-radius:10px;
-	
 }
+
+.ui-state-active a {
+    color: #FFFFFF;
+}
+
 
 
 /*li{
