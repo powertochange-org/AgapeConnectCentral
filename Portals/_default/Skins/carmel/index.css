@@ -101,6 +101,11 @@ footer{
 	background:#0079c1;
 }
 
+.dnnLabel{
+	width:100%;
+}
+
+
 footer .bottom{
 	width:1000px;
 	margin:0 auto;
@@ -184,7 +189,6 @@ footer .copy{
 	border-radius:5px;
 	
 }
-
 
 
 /*li{
