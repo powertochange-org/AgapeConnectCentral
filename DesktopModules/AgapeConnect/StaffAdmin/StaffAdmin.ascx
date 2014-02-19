@@ -214,7 +214,7 @@
                                  </div>
                                 <asp:Label ID="lblName1"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User.FirstName") %>' />
                                <br />
-                                <asp:HyperLink ID="hlEditProfile1" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId1")) %>'>Edit Profile</asp:HyperLink>
+                                <asp:HyperLink ID="hlEditProfile1" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId1")) %>'>Edit&nbsp;Profile</asp:HyperLink>
                                  &nbsp; &nbsp;
                                 <asp:LinkButton ID="btnImpersonateUser" runat="server" CommandName="Impersonate" CommandArgument='<%# Eval("UserId1") %>'>Impersonate</asp:LinkButton>
                                 
@@ -230,7 +230,7 @@
                                  </div>
                                 <asp:Label ID="lblName2"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User2.FirstName") %>' />
                                 
-                                <asp:HyperLink ID="hlEditProfile2" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId2")) %>'>Edit Profile</asp:HyperLink>
+                                <asp:HyperLink ID="hlEditProfile2" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId2")) %>'>Edit&nbsp;Profile</asp:HyperLink>
                                <asp:LinkButton ID="btnImpersonateSpouse" runat="server" CommandName="Impersonate" CommandArgument='<%# Eval("UserId2") %>'>Impersonate</asp:LinkButton>
                                 
                                 <asp:TextBox ID="tbName2"  CssClass="AgapeH3" runat="server"  Font-Size="20pt" Font-Bold="true" Text='<%# StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "SpouseName") %>' />
