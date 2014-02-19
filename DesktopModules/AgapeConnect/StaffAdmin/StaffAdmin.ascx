@@ -404,7 +404,7 @@
                                 <table>
                                 <tr>
                                 <td><asp:CheckBox ID="cbPayOnly" runat="server" Checked= '<%#  IIF(StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "PayOnly")="", false, StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "PayOnly"))  %>' /></td>
-                                <td width="100px">
+                                <td>
                                 <uc1:labelcontrol ID="labelcontrol11" runat="server" Text="Payment Only" Width="100px" style="text-align: left; max-width: 100px !important;"
                                     HelpText="Centrally Funded staff are sometimes paid through a Pay Only Responsibility Center. You cannat reimburse from or give to a PayOnly Responsiblity Center." />
                            <td></td>   
