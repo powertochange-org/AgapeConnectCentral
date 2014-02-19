@@ -391,7 +391,7 @@
                                 <uc1:labelcontrol ID="labelcontrol6" runat="server" Text="Responsibility Center"
                                     HelpText="Enter their chargable Responsibility Center (cost centre) here" Width="200px" />
                             </td>
-                            <td colspan="1">
+                            <td colspan="2">
                                 
                                 <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# StaffBrokerFunctions.ValidateCostCenter(Eval("CostCenter"), PortalId) %>'
                                     DataSourceID="dsCostCenters" DataTextField="DisplayName" DataValueField="CostCentreCode"
@@ -448,7 +448,7 @@
                                     </WhereParameters>
                                 </asp:LinqDataSource>
                             </td>
-                            <td width="100%">
+                            <td colspan="2" width="100%">
                             <asp:Label ID="lblCentralOnly" runat="server" Font-Italic="true" ForeColor="Gray">* Only applies to Centrally Funded Staff</asp:Label>
 
                                 
