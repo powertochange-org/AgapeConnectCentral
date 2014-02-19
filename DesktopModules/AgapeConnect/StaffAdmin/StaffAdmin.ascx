@@ -407,7 +407,7 @@
                                 <td width="100px">
                                 <uc1:labelcontrol ID="labelcontrol11" runat="server" Text="Payment Only" Width="100px" style="text-align: left; max-width: 100px !important;"
                                     HelpText="Centrally Funded staff are sometimes paid through a Pay Only Responsibility Center. You cannat reimburse from or give to a PayOnly Responsiblity Center." />
-                           <td width="100%"></td>   
+                           <td></td>   
                            </td>
                            </tr>
                             </table>
@@ -448,7 +448,7 @@
                                     </WhereParameters>
                                 </asp:LinqDataSource>
                             </td>
-                            <td colspan="2" width="100%">
+                            <td colspan="2">
                             <asp:Label ID="lblCentralOnly" runat="server" Font-Italic="true" ForeColor="Gray">* Only applies to Centrally Funded Staff</asp:Label>
 
                                 
