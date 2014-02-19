@@ -208,7 +208,7 @@
                             <!-- NAMES -->
                             <td>
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 <div style="float: left ; margin-right: 10px;">
                                     <asp:Image ID="ProfileImage" runat="server" width="100px" ImageUrl= '<%# GetPhoto(Eval("UserId1")) %>' />
                                  </div>
@@ -224,7 +224,7 @@
                             <td width="50px" style="min-width: 50px !important;" >
                             &nbsp;  
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 <div style="float: left ; margin-right: 10px;">
                                     <asp:Image ID="Image1" runat="server" width="100px" Visible='<%# Eval("UserId2")>0 %>' ImageUrl='<%# GetPhoto(Eval("UserId2")) %>' />
                                  </div>
@@ -517,7 +517,7 @@
                             <!-- NAMES -->
                             <td style="width:100px"> &nbsp;
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 
                                 <asp:Label ID="Label1"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User.FirstName") %>' />
                                 
@@ -527,7 +527,7 @@
                             <td width="50px" style="min-width: 50px !important;" >
                             &nbsp;  
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 
                                 <asp:Label ID="Label3"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User2.FirstName") %>' />
                                 
