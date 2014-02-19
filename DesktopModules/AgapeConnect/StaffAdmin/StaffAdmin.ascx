@@ -432,7 +432,7 @@
                                     HelpText="Centrally funded staff use are paid reimbursements using a personal account code"
                                     Width="200px" />
                             </td>
-                            <td>
+                            <td colspan="1">
                                 <asp:DropDownList ID="ddlPAC" runat="server" DataSourceID="dsAssets" DataTextField="DisplayName"
                                     DataValueField="AccountCode" AppendDataBoundItems="true" SelectedValue='<%# StaffBrokerFunctions.ValidateAccountCode(StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "PersonalAccountCode"), PortalId) %>'>
                                     <asp:ListItem Text="" Value="" />
