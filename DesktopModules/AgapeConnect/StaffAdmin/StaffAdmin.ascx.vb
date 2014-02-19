@@ -175,10 +175,13 @@ Namespace DotNetNuke.Modules.StaffAdmin
         End Function
         Public Function GetPhoto(ByVal UID As Integer) As String
             Try
-                Dim FileID = UserController.GetUserById(PortalId, UID).Profile.GetPropertyValue("Photo")
-                Dim _theFile = DotNetNuke.Services.FileSystem.FileManager.Instance.GetFile(FileID)
-                Return DotNetNuke.Services.FileSystem.FileManager.Instance.GetUrl(_theFile)
-
+				'username 
+				Dim username = UserController.GetUserById(PortalId, UID).Username
+				username = Left(username, Len(username) - 1)
+                'Dim FileID = UserController.GetUserById(PortalId, UID).Profile.GetPropertyValue("Photo")
+                'Dim _theFile = DotNetNuke.Services.FileSystem.FileManager.Instance.GetFile(FileID)
+				Return "https://staff.powertochange.org/custom-pages/webService.php?type=staff_photo&api_token=V7qVU7n59743KNVgPdDMr3T8&staff_username=" + username
+                'Return DotNetNuke.Services.FileSystem.FileManager.Instance.GetUrl(_theFile)
             Catch ex As Exception
                 Return "/images/no_avatar.gif"
             End Try
