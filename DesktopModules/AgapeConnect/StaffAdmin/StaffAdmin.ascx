@@ -458,7 +458,7 @@
                             <td>
                                 <uc1:labelcontrol ID="labelcontrol12" runat="server" Text="Staff Type" HelpText="Enter their Staff Type here. You can edit the list of Staff Types, using the link at the bottom of this page."  Width="200px"/>
                             </td>
-                            <td>
+                            <td colspan="4">
                                 <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="dsStaffTypes" 
                                     DataTextField="Name" DataValueField="StaffTypeId" SelectedValue='<%# Bind("StaffTypeId") %>'>
                                 </asp:DropDownList>
