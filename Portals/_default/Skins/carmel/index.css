@@ -5,7 +5,7 @@ header a, header a:visited {
 
 a, a:active, a:hover, a:focus{
 	text-decoration:none;
-	color:#0000ee;
+    color:#005e90;
 }
 
 a:hover{
@@ -142,6 +142,10 @@ footer .copy{
 	margin-right:5px;
 }
 
+.accounts_team {
+    background-color:#eeeeee;
+}
+
 #dnn_ContentPane{
 	width:1000px;
 	margin:auto;
@@ -175,13 +179,13 @@ footer .copy{
 .ui-state-default{
 	background-color:#f8f8f8;
 	padding:5px;
-	border-radius:5px;
+	border-radius:10px;
 }
 
 .ui-state-active {
-	background-color:#bce7ff;
+	background-color:#0079c1;
 	padding:5px;
-	border-radius:5px;
+	border-radius:10px;
 	
 }
 
@@ -227,11 +231,13 @@ footer .copy{
 	border:1px solid #2989ff;
 }
 
+
+
 /*div.AcPane > div  > table > tbody, .dnn_ctr495_StaffRmb_tvProcessed{*/
 .ui-accordion-content{
 	display:block;
 	overflow:auto;
-	height:280;
+	height:280px;
 }
 
 /* Autocomplete
