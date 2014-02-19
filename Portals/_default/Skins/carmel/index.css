@@ -105,6 +105,11 @@ footer{
 	width:inherit;
 }
 
+td > .dnnLabel {
+    width: 220px;
+	width: inherit;
+}
+
 
 footer .bottom{
 	width:1000px;
