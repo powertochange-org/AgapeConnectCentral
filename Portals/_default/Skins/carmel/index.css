@@ -12,6 +12,10 @@ a:hover{
 	text-decoration:underline;
 }
 
+.aspNetDisabled, a.aspNetDisabled, .dnnDisabled, a.dnnDisabled {
+    color: rgba(53, 113, 186, 0.75);
+}
+
 .AgapeLink{
 	cursor:pointer;
 }
@@ -139,16 +143,6 @@ header td td{
 footer{
 	background:#0079c1;
 }
-
-.dnnLabel{
-	width:inherit;
-}
-
-td > .dnnLabel {
-    width: 220px;
-	width: inherit;
-}
-
 
 footer .bottom{
 	width:1000px;
