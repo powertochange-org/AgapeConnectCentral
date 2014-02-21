@@ -208,13 +208,13 @@
                             <!-- NAMES -->
                             <td>
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 <div style="float: left ; margin-right: 10px;">
                                     <asp:Image ID="ProfileImage" runat="server" width="100px" ImageUrl= '<%# GetPhoto(Eval("UserId1")) %>' />
                                  </div>
                                 <asp:Label ID="lblName1"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User.FirstName") %>' />
                                <br />
-                                <asp:HyperLink ID="hlEditProfile1" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId1")) %>'>Edit Profile</asp:HyperLink>
+                                <asp:HyperLink ID="hlEditProfile1" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId1")) %>'>Edit&nbsp;Profile</asp:HyperLink>
                                  &nbsp; &nbsp;
                                 <asp:LinkButton ID="btnImpersonateUser" runat="server" CommandName="Impersonate" CommandArgument='<%# Eval("UserId1") %>'>Impersonate</asp:LinkButton>
                                 
@@ -224,13 +224,13 @@
                             <td width="50px" style="min-width: 50px !important;" >
                             &nbsp;  
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 <div style="float: left ; margin-right: 10px;">
                                     <asp:Image ID="Image1" runat="server" width="100px" Visible='<%# Eval("UserId2")>0 %>' ImageUrl='<%# GetPhoto(Eval("UserId2")) %>' />
                                  </div>
                                 <asp:Label ID="lblName2"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User2.FirstName") %>' />
                                 
-                                <asp:HyperLink ID="hlEditProfile2" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId2")) %>'>Edit Profile</asp:HyperLink>
+                                <asp:HyperLink ID="hlEditProfile2" runat="server"  NavigateUrl='<%# getEditProfileUrl(Eval("UserId2")) %>'>Edit&nbsp;Profile</asp:HyperLink>
                                <asp:LinkButton ID="btnImpersonateSpouse" runat="server" CommandName="Impersonate" CommandArgument='<%# Eval("UserId2") %>'>Impersonate</asp:LinkButton>
                                 
                                 <asp:TextBox ID="tbName2"  CssClass="AgapeH3" runat="server"  Font-Size="20pt" Font-Bold="true" Text='<%# StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "SpouseName") %>' />
@@ -391,7 +391,7 @@
                                 <uc1:labelcontrol ID="labelcontrol6" runat="server" Text="Responsibility Center"
                                     HelpText="Enter their chargable Responsibility Center (cost centre) here" Width="200px" />
                             </td>
-                            <td colspan="1">
+                            <td colspan="2">
                                 
                                 <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# StaffBrokerFunctions.ValidateCostCenter(Eval("CostCenter"), PortalId) %>'
                                     DataSourceID="dsCostCenters" DataTextField="DisplayName" DataValueField="CostCentreCode"
@@ -404,10 +404,10 @@
                                 <table>
                                 <tr>
                                 <td><asp:CheckBox ID="cbPayOnly" runat="server" Checked= '<%#  IIF(StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "PayOnly")="", false, StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "PayOnly"))  %>' /></td>
-                                <td width="100px">
+                                <td>
                                 <uc1:labelcontrol ID="labelcontrol11" runat="server" Text="Payment Only" Width="100px" style="text-align: left; max-width: 100px !important;"
                                     HelpText="Centrally Funded staff are sometimes paid through a Pay Only Responsibility Center. You cannat reimburse from or give to a PayOnly Responsiblity Center." />
-                           <td width="100%"></td>   
+                           <td></td>   
                            </td>
                            </tr>
                             </table>
@@ -432,7 +432,7 @@
                                     HelpText="Centrally funded staff use are paid reimbursements using a personal account code"
                                     Width="200px" />
                             </td>
-                            <td>
+                            <td colspan="1">
                                 <asp:DropDownList ID="ddlPAC" runat="server" DataSourceID="dsAssets" DataTextField="DisplayName"
                                     DataValueField="AccountCode" AppendDataBoundItems="true" SelectedValue='<%# StaffBrokerFunctions.ValidateAccountCode(StaffBrokerFunctions.GetStaffProfileProperty(Eval("StaffId"), "PersonalAccountCode"), PortalId) %>'>
                                     <asp:ListItem Text="" Value="" />
@@ -448,7 +448,7 @@
                                     </WhereParameters>
                                 </asp:LinqDataSource>
                             </td>
-                            <td width="100%">
+                            <td colspan="2">
                             <asp:Label ID="lblCentralOnly" runat="server" Font-Italic="true" ForeColor="Gray">* Only applies to Centrally Funded Staff</asp:Label>
 
                                 
@@ -458,7 +458,7 @@
                             <td>
                                 <uc1:labelcontrol ID="labelcontrol12" runat="server" Text="Staff Type" HelpText="Enter their Staff Type here. You can edit the list of Staff Types, using the link at the bottom of this page."  Width="200px"/>
                             </td>
-                            <td>
+                            <td colspan="4">
                                 <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="dsStaffTypes" 
                                     DataTextField="Name" DataValueField="StaffTypeId" SelectedValue='<%# Bind("StaffTypeId") %>'>
                                 </asp:DropDownList>
@@ -517,7 +517,7 @@
                             <!-- NAMES -->
                             <td style="width:100px"> &nbsp;
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 
                                 <asp:Label ID="Label1"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User.FirstName") %>' />
                                 
@@ -527,7 +527,7 @@
                             <td width="50px" style="min-width: 50px !important;" >
                             &nbsp;  
                             </td>
-                            <td style="white-space: nowrap; width: 50%;">
+                            <td style="width: 50%;">
                                 
                                 <asp:Label ID="Label3"  CssClass="AgapeH3" runat="server" Font-Size="20pt" Font-Bold="true" Text='<%# Eval("User2.FirstName") %>' />
                                 

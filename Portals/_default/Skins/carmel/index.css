@@ -140,6 +140,16 @@ footer{
 	background:#0079c1;
 }
 
+.dnnLabel{
+	width:inherit;
+}
+
+td > .dnnLabel {
+    width: 220px;
+	width: inherit;
+}
+
+
 footer .bottom{
 	width:1000px;
 	margin:0 auto;
