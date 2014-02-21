@@ -16,6 +16,41 @@ a:hover{
 	cursor:pointer;
 }
 
+.Agape_Subtitle {
+    font-size: 13px;
+}
+
+.rmbDetails .dnnGridItem, .rmbDetails .dnnGridAltItem{
+    font-size: 11px;
+}
+
+.rmbDetails {
+    background: rgba(114, 199, 118, 0.20);
+    border-radius:10px;
+}
+
+table.rmbDetails tr.dnnGridHeader, table.rmbDetails tr.dnnGridHeader th {
+    background: transparent;
+    border-right:none;
+}
+
+div.inverse {
+    background: #444;
+    color:white;
+}
+
+table.rmbDetails tr.dnnGridHeader{
+    font-size: 13px;
+    background: rgba(114, 199, 118, 0.50);
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+}
+
+table.rmbHeader  {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background:rgba(0, 0, 0, 0.20);
+}
 
 body {
 	margin:0;
@@ -93,6 +128,10 @@ header td td{
 	padding:5px;
 }
 
+#dnn_ContentPane {
+    width: 1200px;
+}
+
 /*header .nav .dnn_dnnnav_ctldnnnav_spmbctr td:hover{
 	background:#0079c1;
 	}*/
@@ -144,6 +183,12 @@ footer .copy{
 
 .accounts_team {
     background-color:#eeeeee;
+    border-radius: 10px;
+}
+
+.team_leader {
+    background-color: rgba(0, 93, 148, 0.11);
+    border-radius: 10px;
 }
 
 #dnn_ContentPane{
