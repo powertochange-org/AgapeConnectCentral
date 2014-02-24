@@ -283,6 +283,13 @@ footer .copy{
 	border:1px solid #2989ff;
 }
 
+.ui-datepicker{
+	background-color: #ffffff;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 5px;
+	margin-top: 5px;
+}
 
 
 /*div.AcPane > div  > table > tbody, .dnn_ctr495_StaffRmb_tvProcessed{*/
