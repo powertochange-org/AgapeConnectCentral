@@ -283,6 +283,10 @@ footer .copy{
 	border:1px solid #2989ff;
 }
 
+.ui-datepicker-next{
+	float:right;
+}
+
 .ui-datepicker{
 	background-color: #ffffff;
 	border: 1px solid;
