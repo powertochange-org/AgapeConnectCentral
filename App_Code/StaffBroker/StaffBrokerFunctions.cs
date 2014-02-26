@@ -563,6 +563,13 @@ public class StaffBrokerFunctions
 
     }
 
+    static public Boolean isLeaderOf(int leaderId, int userId) {
+        foreach (User u in GetTeam(leaderId)) {
+            if (u.UserID == userId) return true;
+        }
+        return false;
+    }
+
     static public List<User> GetTeam(int LeaderId)
     {
 
