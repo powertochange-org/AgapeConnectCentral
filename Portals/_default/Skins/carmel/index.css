@@ -141,6 +141,16 @@ header td td{
 	z-index:5000;
 }
 
+.dnnLabel{
+	width:inherit;
+}
+
+td > .dnnLabel {
+    width: 220px;
+	width: inherit;
+}
+
+
 .dnn_dnnnav_ctldnnnav_spmsub td{
 	padding:5px;
 }
