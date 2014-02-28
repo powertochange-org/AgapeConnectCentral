@@ -212,11 +212,13 @@ footer .copy{
 .accounts_team {
     background-color:#eeeeee;
     border-radius: 10px;
+    margin-bottom:4px;
 }
 
 .team_leader {
     background-color: rgba(0, 93, 148, 0.11);
     border-radius: 10px;
+    margin-bottom: 4px;
 }
 
 #dnn_ContentPane{
