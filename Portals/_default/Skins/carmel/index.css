@@ -19,13 +19,31 @@ a:hover{
 input.aspNetDisabled {
 	padding: 5px;
 	border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 #advanceSection{
 	background: rgba(0, 0, 0, 0.20);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	padding: 10px;
+    -moz-border-radius-bottomright:10px;
+    -moz-border-radius-bottomleft:10px;
+    -webkit-border-bottom-right-radius:10px;
+    -webkit-border-bottom-left-radius:10px;	padding: 10px;
+}
+
+.rmb_form {
+    box-shadow: 10px 10px 5px #888888; 
+    border-bottom-right-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    -moz-border-radius-bottomright:10px;
+    -moz-border-radius-topright:10px;
+    -moz-border-radius-bottomleft:10px;
+    -webkit-border-bottom-right-radius:10px;
+    -webkit-border-top-right-radius:10px;
+    -webkit-border-bottom-left-radius:10px;
 }
 
 .AgapeLink{
@@ -43,6 +61,8 @@ input.aspNetDisabled {
 .rmbDetails {
     background: rgba(114, 199, 118, 0.20);
     border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 table.rmbDetails tr.dnnGridHeader, table.rmbDetails tr.dnnGridHeader th {
@@ -65,6 +85,10 @@ table.rmbDetails tr.dnnGridHeader{
 table.rmbHeader  {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    -moz-border-radius-topright:10px;
+    -moz-border-radius-topleft:10px;
+    -webkit-border-top-right-radius:10px;
+    -webkit-border-top-left-radius:10px;
     background:rgba(0, 0, 0, 0.20);
 	padding: 10px;
 }
@@ -212,12 +236,16 @@ footer .copy{
 .accounts_team {
     background-color:#eeeeee;
     border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
     margin-bottom:4px;
 }
 
 .team_leader {
     background-color: rgba(0, 93, 148, 0.11);
     border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
     margin-bottom: 4px;
 }
 
@@ -237,6 +265,8 @@ footer .copy{
 	background:white;
 	border:solid 1px #000000;
 	border-radius:15px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
 	padding:10px;
 }
 
@@ -249,18 +279,24 @@ footer .copy{
 	margin:0 10px;
 	padding:5px;
 	border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
 }
 
 .ui-state-default{
 	background-color:#f8f8f8;
 	padding:5px;
 	border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 .ui-state-active {
 	background-color:#0079c1;
 	padding:5px;
 	border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 .ui-state-active a {
@@ -283,6 +319,8 @@ footer .copy{
 	border: 2px solid;
 	background: #ffe4e4;
 	border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 .ui-state-highlight{
@@ -293,6 +331,8 @@ footer .copy{
 	color: #0000ee;
 	border: 2px solid;
 	border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 	background: #e4e4ff;
 	
 }
@@ -300,12 +340,16 @@ footer .copy{
 .ui-accordion{
 	padding:10px;
 	border-radius:20px;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
 	border:2px solid #000000;
 }
 
 .ui-tabs-panel{
 	padding:10px;
 	border-radius:20px;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
 	border:1px solid #2989ff;
 }
 
@@ -317,6 +361,8 @@ footer .copy{
 	background-color: #ffffff;
 	border: 1px solid;
 	border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 	padding: 5px;
 	margin-top: 5px;
 }
