@@ -429,3 +429,17 @@ footer .copy{
     background: rgba(200, 200, 200, 0.7) url('/../../images/loading.gif') center center no-repeat;
     z-index:90000;
 }
+
+span.toggleButton {
+    padding: 6px; 
+    border-radius:10px; 
+    margin-bottom:5px; 
+    background-color:lightgray; 
+    color:gray; 
+    display: block; 
+    text-align:center;
+}
+
+span.toggleButton.enabled {
+    color:#0079c1;
+}
