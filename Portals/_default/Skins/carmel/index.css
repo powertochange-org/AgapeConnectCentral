@@ -430,7 +430,7 @@ footer .copy{
     z-index:90000;
 }
 
-span.toggleButton {
+span.buttonLabel {
     padding: 6px; 
     border-radius:10px; 
     margin-bottom:5px; 
@@ -440,6 +440,3 @@ span.toggleButton {
     text-align:center;
 }
 
-span.toggleButton.enabled {
-    color:#0079c1;
-}
