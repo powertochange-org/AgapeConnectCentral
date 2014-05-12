@@ -258,6 +258,32 @@ footer .copy{
     margin-bottom: 4px;
 }
 
+.approver {
+    background-color: rgba(252, 175, 0, 0.25);
+    border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    display:inline-block;
+    width:100%;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.my_section {
+    background-color: rgba(0, 175, 0, 0.24);
+    border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    width:100%;
+    display:inline-block;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin-bottom: 4px;
+    text-align:center;
+}
+
 #dnn_ContentPane{
 	width:1000px;
 	margin:auto;
@@ -451,10 +477,7 @@ footer .copy{
 }
 
 span.buttonLabel {
-    padding: 6px; 
     border-radius:10px; 
-    margin-bottom:5px; 
-    background-color:lightgray; 
     color:gray; 
     display: block; 
     text-align:center;
