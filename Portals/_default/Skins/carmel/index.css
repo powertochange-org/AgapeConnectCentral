@@ -479,7 +479,7 @@ footer .copy{
 span.buttonLabel {
     border-radius:10px; 
     color:gray; 
-    display: block; 
     text-align:center;
+    font-size:x-small;
 }
 
