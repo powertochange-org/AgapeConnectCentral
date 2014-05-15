@@ -17,7 +17,8 @@ a:hover{
 }
 
 input.aspNetDisabled {
-	padding: 5px;
+	padding-left: 5px;
+    padding-right: 5px;
 	border-radius: 10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
