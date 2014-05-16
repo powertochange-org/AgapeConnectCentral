@@ -14,14 +14,29 @@ a:hover{
 
 .aspNetDisabled, a.aspNetDisabled, .dnnDisabled, a.dnnDisabled {
     color: rgba(53, 113, 186, 0.75);
+    background-color: transparent;
 }
 
-input.aspNetDisabled {
-	padding-left: 5px;
-    padding-right: 5px;
-	border-radius: 10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+input {
+    padding:2px;
+	border-radius: 7px;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+}
+
+select {
+    -webkit-appearance:none;
+    padding: 2px;
+    border-radius: 7px;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {
+        padding-right:18px;
+        background: white url("images/arrowHeadDown.png") no-repeat right center;
+    }
 }
 
 #advanceSection{
