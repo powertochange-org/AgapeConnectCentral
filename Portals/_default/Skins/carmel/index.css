@@ -484,3 +484,11 @@ span.buttonLabel {
     font-size:x-small;
 }
 
+.old_date {
+    background-color:orange;
+}
+
+#olddatetext {
+    color:orangered;
+}
+
