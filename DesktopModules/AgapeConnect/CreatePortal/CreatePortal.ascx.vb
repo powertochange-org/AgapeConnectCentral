@@ -561,16 +561,16 @@ Namespace DotNetNuke.Modules.AgapeConnect
             tnt.CreateUsersFromTnt()
         End Sub
 
-        Protected Sub btnCreateAllUsers_Click(sender As Object, e As EventArgs) Handles btnCreateAllUsers.Click
+        Protected Sub btnCreateAllUsers_Click(sender As Object, e As System.EventArgs) Handles btnCreateAllUsers.Click
             createUserFromTnT()
 
         End Sub
 
-        Protected Sub btnproxy_Click(sender As Object, e As EventArgs) Handles btnproxy.Click
+        Protected Sub btnproxy_Click(sender As Object, e As System.EventArgs) Handles btnproxy.Click
 
         End Sub
 
-        Protected Sub btnCreateEntropy_Click(sender As Object, e As EventArgs) Handles btnCreateEntropy.Click
+        Protected Sub btnCreateEntropy_Click(sender As Object, e As System.EventArgs) Handles btnCreateEntropy.Click
             StaffBrokerFunctions.SetSetting("TestUserPassword", "Thisisatestaccount", 0)
 
         End Sub

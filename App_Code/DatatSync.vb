@@ -712,7 +712,8 @@ Public Class DatatSync
                     If theRmb.Count > 0 Then
 
                         If Rmb.Status = "SUCCESS" Then
-                            theRmb.First.Status = StaffRmb.RmbStatus.Processed
+                            theRmb.First.Status = StaffRmb.RmbStatus.Paid
+
                             theRmb.First.Period = Rmb.ActualPeriod
                             theRmb.First.Year = Rmb.ActualYear
                             theRmb.First.SpareField5 = Rmb.BatchId
@@ -733,7 +734,7 @@ Public Class DatatSync
                     Dim theAdv = From c In d.AP_Staff_AdvanceRequests Where c.AdvanceId = -Rmb.RowId And c.PortalId = PS.PortalId
                     If theAdv.Count > 0 Then
                         If Rmb.Status = "SUCCESS" Then
-                            theAdv.First.RequestStatus = StaffRmb.RmbStatus.Processed
+                            theAdv.First.RequestStatus = StaffRmb.RmbStatus.Paid
                             theAdv.First.Period = Rmb.ActualPeriod
                             theAdv.First.Year = Rmb.ActualYear
                             theAdv.First.ErrorMessage = "(Processed in Batch" & Rmb.BatchId & ")"
