@@ -45,7 +45,7 @@
 			<div class='clear'></div>
 		</div>
 		<div class='middle'>
-			<div class='logo'><dnn:LOGO runat="server" id="dnnLOGO" /></div>
+			<div class='logo'><dnn:LOGO runat="server" id="dnnLOGO" />
 			</div>
 		</div>
 		<div class='menu_bg'>
