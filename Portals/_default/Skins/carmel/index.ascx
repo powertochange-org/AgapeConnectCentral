@@ -53,7 +53,7 @@
 	<div id="ContentPane" runat="server"  ></div>
 	<footer>
 		<div class='bottom'>
-			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /></span><a class='privacy' href=''><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
+			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /><a class='privacy' href='#'><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
 		</div>
 	</footer>
 
