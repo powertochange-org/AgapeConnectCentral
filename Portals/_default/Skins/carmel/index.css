@@ -507,3 +507,11 @@ span.buttonLabel {
     color:orangered;
 }
 
+span.menu_link {
+    font-size:6.5pt;
+    color:#999999;
+}
+
+.jqtree-title {
+    color: #005E90;
+}
