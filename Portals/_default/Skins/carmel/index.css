@@ -515,3 +515,27 @@ span.menu_link {
 .jqtree-title {
     color: #005E90;
 }
+
+.dateproblem {
+    color:black;
+}
+
+.rightaway {
+    color:green;
+}
+
+.aheadofschedule {
+    color:blue;
+}
+
+.ontime {
+    color:gold;
+}
+
+.late {
+    color:darkorange;
+}
+
+.overdue {
+    color:red;
+}
