@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		<div class='menu_bg'>
-			<div class='nav'><dnn:NAV runat="server" id="dnnNAV" /></div>
+			<div class='nav'><dnn:NAV runat="server" id="dnnNAV" ProviderName="SolpartMenuNavigationProvider" /></div>
 		</div>
 	</header>
 	<div id="ContentPane" runat="server"  ></div>
