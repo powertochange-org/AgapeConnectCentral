@@ -1,11 +1,18 @@
 <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/User.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
-<%@ Register TagPrefix="dnn" TagName="NAV" Src="~/Admin/Skins/Nav.ascx" %>
+<%--<%@ Register TagPrefix="dnn" TagName="NAV" Src="~/Admin/Skins/Nav.ascx" %>--%>
 <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SEARCH" Src="~/Admin/Skins/Search.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="PRIVACY" Src="~/Admin/Skins/Privacy.ascx" %>
+<%@ Register TagPrefix="ddr" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
+<%@ Register TagPrefix="ddr" Namespace="DotNetNuke.Web.DDRMenu.TemplateEngine"
+  Assembly="DotNetNuke.Web.DDRMenu" %>
+
+<dnn:DnnJsInclude ID="bootstrapJS" runat="server" FilePath="bootstrap/js/bootstrap.min.js" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude ID="customJS" runat="server" FilePath="js/scripts.js" PathNameAlias="SkinPath" />
 
 <script type="text/javascript">
       (function ($, Sys) {
@@ -49,7 +56,24 @@
 			</div>
 		</div>
 		<div class='menu_bg'>
-			<div class='nav'><dnn:NAV runat="server" id="dnnNAV" ProviderName="SolpartMenuNavigationProvider" /></div>
+			<%--<div class='nav'>
+                <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
+            <%--<dnn:NAV runat="server" id="dnnNAV" ProviderName="SolpartMenuNavigationProvider" />
+			</div>--%>
+            <div class="navbar">
+            	    <div class="navbar-inner">
+                        <%--<span class="brand visible-desktop">
+                            <dnn:LOGO runat="server" id="LOGO1" />
+                        </span><!--/Logo-->
+                        <span class="brand hidden-desktop">
+                            <dnn:LOGO runat="server" id="dnnLOGOmobi" />
+                        </span><!--/Logo-->--%>
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>
+                        <div id="navdttg" class="nav-collapse collapse pull-right">
+                            <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
+                        </div><!-- END nav-collapse -->
+                    </div><!-- END navbar-inner -->
+			    </div><!-- END navbar -->
 		</div>
 	</header>
 	<div id="ContentPane" runat="server"  ></div>
