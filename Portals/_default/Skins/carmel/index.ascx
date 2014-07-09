@@ -42,6 +42,23 @@
       }(jQuery, window.Sys));
 
 </script>
+<script type='text/javascript'>
+    function popUpShow() {
+        $("#popUp").show();
+        var e = document.getElementById('popUpButton');
+        e.style.background = '#f4f4f4';
+        e.style.border = '1px solid #d6d7d4';
+        e.style.borderBottom = '1px solid #f4f4f4';
+    }
+    function popUpHide() {
+        $("#popUp").hide();
+        var e = document.getElementById('popUpButton');
+        e.style.background = '#f58220';
+        e.style.border = '1px solid #eb8528';
+    }
+    /* todo  jQuery(document).ready(function(){
+      });*/
+</script>
 
 	<header>
 		<div class='top'>
@@ -52,8 +69,32 @@
 			<div class='clear'></div>
 		</div>
 		<div class='middle'>
-			<div class='logo'><dnn:LOGO runat="server" id="dnnLOGO" /></div>
+			<div class='logo'>
+                <dnn:LOGO runat="server" id="dnnLOGO" />
+                <div id="staff-app-container">
+                     <a id="popUpButton" class="button related" onmouseout="popUpHide();" onmouseover="popUpShow();" 
+                    style="border: 1px solid rgb(235, 133, 40); background: rgb(245, 130, 32);">Staff Apps</a>
+                    <div id="popUp" onmouseout="popUpHide();" onmouseover="popUpShow();" >
+                        <center>
+                            <ul class="popupMenu">
+                                <table>
+                                    <tbody>
+                                        <tr><td style="border:0;"> <a href="https://absences.powertochange.org"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Absence-Tracker-Icon.png" alt="Absence Tracker"></a></td>
+                                            <td style="border:0;"> <a href="/reports/"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Reports-Icon.png" alt="Reports"></a></td>
+                                            <td style="border:0;"> <a href="/wp-admin/admin.php?page=s2"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/My-Settings-Icon.png" alt="My Settings"></a></td>
+                                        </tr>
+                                        <tr><td style="border:0;"> <a href="/staff-directory/"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Staff-Directory-Icon.png" alt="Staff Directory"></a></td>
+                                            <td style="border:0;"> <a href="mailto:helpdesk@powertochange.org"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/HelpDesk-Icon.png" alt="Help Desk"></a></td>
+                                            <td style="border:0;"> <a href="https://wiki.powertochange.org/help"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Self-Help-Wiki-Icon.png" alt="Self-Help Wiki"></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </ul>
+                        </center>
+                    </div>
+                </div>
 			</div>
+           
 		</div>
 		<div class='menu_bg'>
 			<%--<div class='nav'>
@@ -61,19 +102,19 @@
             <%--<dnn:NAV runat="server" id="dnnNAV" ProviderName="SolpartMenuNavigationProvider" />
 			</div>--%>
             <div class="navbar">
-            	    <div class="navbar-inner">
-                        <%--<span class="brand visible-desktop">
-                            <dnn:LOGO runat="server" id="LOGO1" />
-                        </span><!--/Logo-->
-                        <span class="brand hidden-desktop">
-                            <dnn:LOGO runat="server" id="dnnLOGOmobi" />
-                        </span><!--/Logo-->--%>
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>
-                        <div id="navdttg" class="nav-collapse collapse pull-right">
-                            <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
-                        </div><!-- END nav-collapse -->
-                    </div><!-- END navbar-inner -->
-			    </div><!-- END navbar -->
+                <div class="navbar-inner">
+                    <%--<span class="brand visible-desktop">
+                        <dnn:LOGO runat="server" id="LOGO1" />
+                    </span><!--/Logo-->
+                    <span class="brand hidden-desktop">
+                        <dnn:LOGO runat="server" id="dnnLOGOmobi" />
+                    </span><!--/Logo-->--%>
+                    <%--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>--%>
+                    <%--<div id="navdttg" class="nav-collapse collapse pull-right">--%>
+                        <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
+                    <%--</div>--%><!-- END nav-collapse -->
+                </div><!-- END navbar-inner -->
+			</div><!-- END navbar -->
 		</div>
 	</header>
 	<div id="ContentPane" runat="server"  ></div>

@@ -152,7 +152,7 @@ header{
 }
 
 header .middle{
-	width:1000px;
+	/*width:1000px;*/
 	margin:0 auto;
 	padding-top:32px;
 }
@@ -511,7 +511,7 @@ span.buttonLabel {
 
 /*------------------------------------------------*/
 /* NAVIGATION */
-/* Borrowed from Gravity skin template */
+/* Borrowed from Gravity skin template and modified */
 /*------------------------------------------------*/
 
 /* for Simple Menu, see Simple menu folder */
@@ -726,4 +726,65 @@ span.buttonLabel {
     }
     /*------------------------------------------------*/
 /* END OF NAVIGATION */
+/*------------------------------------------------*/
+
+/*------------------------------------------------*/
+/* Staff Apps Button*/
+/*------------------------------------------------*/
+
+header .button.related {
+background: #f58220;
+border: 1px solid #eb8528;
+cursor: default;
+z-index: 2;
+position: relative;
+}
+
+header .button {
+float: right;
+width: 103px;
+height: 21px;
+color: #000000;
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+font-weight: 300;
+font-size: 13px;
+padding-top: 5px;
+margin-right: 10px;
+margin-top: 10px;
+}
+
+#popUpButton:hover, #popUpButton:active, #popUpButton:focus {
+        color: #000000!important;
+        text-decoration: none;
+}
+
+#popup {
+    padding: 10px 40px;
+    right: 10px;
+    top: 37px;
+    /*width: 300px;
+    height: 300px;*/
+    z-index: 1;
+    border: 1px solid rgb(214, 215, 212);
+    display: none;
+    position: absolute;
+    background-color: rgb(244, 244, 244);
+}
+
+header .popupMenu {
+color: #adafb2;
+font-size: 15px;
+padding: 15px 0;
+margin: 15px 0;
+}
+
+#staff-app-container {
+    display: inline-block;
+    float: right;
+    position: relative;
+    min-width: 302px;
+}
+/*------------------------------------------------*/
+/* END of Staff Apps Button*/
 /*------------------------------------------------*/
