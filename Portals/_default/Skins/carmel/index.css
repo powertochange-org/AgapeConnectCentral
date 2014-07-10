@@ -1,4 +1,4 @@
-@import url("local-overrides.css")
+@import url("local-overrides.css");
 @import url('./bootstrap/css/bootstrap.min.css');
 
 header a, header a:visited {
