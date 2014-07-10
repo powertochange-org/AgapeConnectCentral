@@ -712,7 +712,7 @@ Public Class DatatSync
                     If theRmb.Count > 0 Then
 
                         If Rmb.Status = "SUCCESS" Then
-                            theRmb.First.Status = StaffRmb.RmbStatus.Processed
+                            theRmb.First.Status = StaffRmb.RmbStatus.Processing
                             theRmb.First.Period = Rmb.ActualPeriod
                             theRmb.First.Year = Rmb.ActualYear
                             theRmb.First.SpareField5 = Rmb.BatchId

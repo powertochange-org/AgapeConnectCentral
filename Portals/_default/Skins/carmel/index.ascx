@@ -1,7 +1,7 @@
 <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/User.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
-<%--<%@ Register TagPrefix="dnn" TagName="NAV" Src="~/Admin/Skins/Nav.ascx" %>--%>
+<%@ Register TagPrefix="dnn" TagName="NAV" Src="~/Admin/Skins/Nav.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SEARCH" Src="~/Admin/Skins/Search.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" %>
@@ -97,10 +97,6 @@
            
 		</div>
 		<div class='menu_bg'>
-			<%--<div class='nav'>
-                <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
-            <%--<dnn:NAV runat="server" id="dnnNAV" ProviderName="SolpartMenuNavigationProvider" />
-			</div>--%>
             <div class="navbar">
                 <div class="navbar-inner">
                     <%--<span class="brand visible-desktop">
@@ -120,7 +116,7 @@
 	<div id="ContentPane" runat="server"  ></div>
 	<footer>
 		<div class='bottom'>
-			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /></span><a class='privacy' href=''><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
+			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /><a class='privacy' href='#'><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
 		</div>
 	</footer>
 

@@ -123,12 +123,14 @@ public class StaffBrokerFunctions
 
     static public Boolean IsDept(int PortalId, string costCenter)
     {
-        StaffBrokerDataContext d = new StaffBrokerDataContext();
-        var cc = from c in d.AP_StaffBroker_CostCenters where c.CostCentreCode == costCenter select c.Type;
-        if (cc.Count() > 0)
-            return cc.First() == CostCentreType.Department;
-
-        else return false;
+        if (costCenter.Length == 6)
+        {
+            StaffBrokerDataContext d = new StaffBrokerDataContext();
+            var cc = from c in d.AP_StaffBroker_CostCenters where c.CostCentreCode == costCenter select c.Type;
+            if (cc.Count() > 0)
+                return cc.First() == CostCentreType.Department;
+        }
+        return false;
 
     }
 

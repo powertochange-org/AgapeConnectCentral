@@ -1,3 +1,4 @@
+@import url("local-overrides.css")
 @import url('./bootstrap/css/bootstrap.min.css');
 
 header a, header a:visited {
@@ -509,6 +510,38 @@ span.buttonLabel {
     color:orangered;
 }
 
+span.menu_link {
+    font-size:6.5pt;
+    color:#999999;
+}
+
+.jqtree-title {
+    color: #005E90;
+}
+
+.dateproblem {
+    color:black;
+}
+
+.rightaway {
+    color:green;
+}
+
+.aheadofschedule {
+    color:blue;
+}
+
+.ontime {
+    color:gold;
+}
+
+.late {
+    color:darkorange;
+}
+
+.overdue {
+    color:red;
+}
 /*------------------------------------------------*/
 /* NAVIGATION */
 /* Borrowed from Gravity skin template and modified */
