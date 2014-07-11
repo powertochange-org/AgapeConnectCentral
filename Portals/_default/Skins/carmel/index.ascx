@@ -99,16 +99,11 @@
 		<div class='menu_bg'>
             <div class="navbar">
                 <div class="navbar-inner">
-                    <%--<span class="brand visible-desktop">
-                        <dnn:LOGO runat="server" id="LOGO1" />
-                    </span><!--/Logo-->
-                    <span class="brand hidden-desktop">
-                        <dnn:LOGO runat="server" id="dnnLOGOmobi" />
-                    </span><!--/Logo-->--%>
                     <%--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>--%>
-                    <div id="navdttg" class="nav-collapse collapse pull-right">
+                    <%--removed Bootstrap classes 'nav-collapse and collapse' from tag ID navddt so that the menu wouldn't collapse on smaller screen resoultions--%>
+                    <div ID="navddt" class="menu-dropdown pull-right">
                         <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
-                    </div><!-- END nav-collapse -->
+                    </div><!-- END menu-dropdown -->
                 </div><!-- END navbar-inner -->
 			</div><!-- END navbar -->
 		</div>
