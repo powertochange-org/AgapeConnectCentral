@@ -106,9 +106,9 @@
                         <dnn:LOGO runat="server" id="dnnLOGOmobi" />
                     </span><!--/Logo-->--%>
                     <%--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>--%>
-                    <%--<div id="navdttg" class="nav-collapse collapse pull-right">--%>
+                    <div id="navdttg" class="nav-collapse collapse pull-right">
                         <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
-                    <%--</div>--%><!-- END nav-collapse -->
+                    </div><!-- END nav-collapse -->
                 </div><!-- END navbar-inner -->
 			</div><!-- END navbar -->
 		</div>
