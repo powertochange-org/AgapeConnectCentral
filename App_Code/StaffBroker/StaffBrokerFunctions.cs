@@ -178,7 +178,33 @@ public class StaffBrokerFunctions
     #endregion
 
 
+    static public Boolean RequiresExtraApproval(string CostCenter) {
+        StaffBrokerDataContext d = new StaffBrokerDataContext();
+        try
+        {
+            int MinistryId = Int32.Parse((from c in d.AP_StaffBroker_Departments where c.CostCentre == CostCenter select c.Spare1).Single());
+            return (from c in d.AP_StaffBroker_Ministries where c.MinistryId == MinistryId select c.FinancialOversightFlag).First();
+        }
+        catch
+        {
+            return true; //If this fails, always require extra approval 
+        }
+    }
 
+
+    static public int getDirectorFor(string CostCenter, int defaultDirector)
+    {
+        StaffBrokerDataContext d = new StaffBrokerDataContext();
+        try
+        {
+            int MinistryId = Int32.Parse((from c in d.AP_StaffBroker_Departments where c.CostCentre == CostCenter select c.Spare1).Single());
+            return (from c in d.AP_StaffBroker_Ministries where c.MinistryId == MinistryId select c.MinistryDirectorID).First();
+        }
+        catch
+        {
+            return defaultDirector;
+        }
+    }
 
 
     public static decimal CurrencyConvert(decimal amount, string fromCurrency, string toCurrency)
