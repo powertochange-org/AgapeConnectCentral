@@ -102,6 +102,9 @@ namespace StaffBroker
     partial void InsertAP_StaffBroker_Department(AP_StaffBroker_Department instance);
     partial void UpdateAP_StaffBroker_Department(AP_StaffBroker_Department instance);
     partial void DeleteAP_StaffBroker_Department(AP_StaffBroker_Department instance);
+    partial void InsertAP_StaffBroker_Ministry(AP_StaffBroker_Ministry instance);
+    partial void UpdateAP_StaffBroker_Ministry(AP_StaffBroker_Ministry instance);
+    partial void DeleteAP_StaffBroker_Ministry(AP_StaffBroker_Ministry instance);
     #endregion
 		
 		public StaffBrokerDataContext() : 
@@ -331,6 +334,14 @@ namespace StaffBroker
 			get
 			{
 				return this.GetTable<AP_StaffBroker_Department>();
+			}
+		}
+		
+		public System.Data.Linq.Table<AP_StaffBroker_Ministry> AP_StaffBroker_Ministries
+		{
+			get
+			{
+				return this.GetTable<AP_StaffBroker_Ministry>();
 			}
 		}
 		
@@ -1682,6 +1693,8 @@ namespace StaffBroker
 		
 		private EntitySet<AP_StaffBroker_Children> _AP_StaffBroker_Childrens;
 		
+		private EntitySet<AP_StaffBroker_Ministry> _AP_StaffBroker_Ministries;
+		
 		private EntityRef<User2> _User2;
 		
 		private EntityRef<User> _User;
@@ -1714,6 +1727,7 @@ namespace StaffBroker
 		{
 			this._AP_StaffBroker_StaffProfiles = new EntitySet<AP_StaffBroker_StaffProfile>(new Action<AP_StaffBroker_StaffProfile>(this.attach_AP_StaffBroker_StaffProfiles), new Action<AP_StaffBroker_StaffProfile>(this.detach_AP_StaffBroker_StaffProfiles));
 			this._AP_StaffBroker_Childrens = new EntitySet<AP_StaffBroker_Children>(new Action<AP_StaffBroker_Children>(this.attach_AP_StaffBroker_Childrens), new Action<AP_StaffBroker_Children>(this.detach_AP_StaffBroker_Childrens));
+			this._AP_StaffBroker_Ministries = new EntitySet<AP_StaffBroker_Ministry>(new Action<AP_StaffBroker_Ministry>(this.attach_AP_StaffBroker_Ministries), new Action<AP_StaffBroker_Ministry>(this.detach_AP_StaffBroker_Ministries));
 			this._User2 = default(EntityRef<User2>);
 			this._User = default(EntityRef<User>);
 			this._AP_StaffBroker_StaffType = default(EntityRef<AP_StaffBroker_StaffType>);
@@ -1918,6 +1932,19 @@ namespace StaffBroker
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AP_StaffBroker_Staff_AP_StaffBroker_Ministry", Storage="_AP_StaffBroker_Ministries", ThisKey="StaffId", OtherKey="MinistryDirectorID")]
+		public EntitySet<AP_StaffBroker_Ministry> AP_StaffBroker_Ministries
+		{
+			get
+			{
+				return this._AP_StaffBroker_Ministries;
+			}
+			set
+			{
+				this._AP_StaffBroker_Ministries.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User2_AP_StaffBroker_Staff", Storage="_User2", ThisKey="UserId2", OtherKey="UserID", IsForeignKey=true)]
 		public User2 User2
 		{
@@ -2059,6 +2086,18 @@ namespace StaffBroker
 		}
 		
 		private void detach_AP_StaffBroker_Childrens(AP_StaffBroker_Children entity)
+		{
+			this.SendPropertyChanging();
+			entity.AP_StaffBroker_Staff = null;
+		}
+		
+		private void attach_AP_StaffBroker_Ministries(AP_StaffBroker_Ministry entity)
+		{
+			this.SendPropertyChanging();
+			entity.AP_StaffBroker_Staff = this;
+		}
+		
+		private void detach_AP_StaffBroker_Ministries(AP_StaffBroker_Ministry entity)
 		{
 			this.SendPropertyChanging();
 			entity.AP_StaffBroker_Staff = null;
@@ -8029,6 +8068,181 @@ namespace StaffBroker
 					this._Spare3 = value;
 					this.SendPropertyChanged("Spare3");
 					this.OnSpare3Changed();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AP_StaffBroker_Ministries")]
+	public partial class AP_StaffBroker_Ministry : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _Name;
+		
+		private bool _FinancialOversightFlag;
+		
+		private int _MinistryDirectorID;
+		
+		private EntityRef<AP_StaffBroker_Staff> _AP_StaffBroker_Staff;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnFinancialOversightFlagChanging(bool value);
+    partial void OnFinancialOversightFlagChanged();
+    partial void OnMinistryDirectorIDChanging(int value);
+    partial void OnMinistryDirectorIDChanged();
+    #endregion
+		
+		public AP_StaffBroker_Ministry()
+		{
+			this._AP_StaffBroker_Staff = default(EntityRef<AP_StaffBroker_Staff>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FinancialOversightFlag", DbType="Bit NOT NULL")]
+		public bool FinancialOversightFlag
+		{
+			get
+			{
+				return this._FinancialOversightFlag;
+			}
+			set
+			{
+				if ((this._FinancialOversightFlag != value))
+				{
+					this.OnFinancialOversightFlagChanging(value);
+					this.SendPropertyChanging();
+					this._FinancialOversightFlag = value;
+					this.SendPropertyChanged("FinancialOversightFlag");
+					this.OnFinancialOversightFlagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MinistryDirectorID", DbType="Int NOT NULL")]
+		public int MinistryDirectorID
+		{
+			get
+			{
+				return this._MinistryDirectorID;
+			}
+			set
+			{
+				if ((this._MinistryDirectorID != value))
+				{
+					if (this._AP_StaffBroker_Staff.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMinistryDirectorIDChanging(value);
+					this.SendPropertyChanging();
+					this._MinistryDirectorID = value;
+					this.SendPropertyChanged("MinistryDirectorID");
+					this.OnMinistryDirectorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AP_StaffBroker_Staff_AP_StaffBroker_Ministry", Storage="_AP_StaffBroker_Staff", ThisKey="MinistryDirectorID", OtherKey="StaffId", IsForeignKey=true)]
+		public AP_StaffBroker_Staff AP_StaffBroker_Staff
+		{
+			get
+			{
+				return this._AP_StaffBroker_Staff.Entity;
+			}
+			set
+			{
+				AP_StaffBroker_Staff previousValue = this._AP_StaffBroker_Staff.Entity;
+				if (((previousValue != value) 
+							|| (this._AP_StaffBroker_Staff.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._AP_StaffBroker_Staff.Entity = null;
+						previousValue.AP_StaffBroker_Ministries.Remove(this);
+					}
+					this._AP_StaffBroker_Staff.Entity = value;
+					if ((value != null))
+					{
+						value.AP_StaffBroker_Ministries.Add(this);
+						this._MinistryDirectorID = value.StaffId;
+					}
+					else
+					{
+						this._MinistryDirectorID = default(int);
+					}
+					this.SendPropertyChanged("AP_StaffBroker_Staff");
 				}
 			}
 		}
