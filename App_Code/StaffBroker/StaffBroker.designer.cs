@@ -1693,8 +1693,6 @@ namespace StaffBroker
 		
 		private EntitySet<AP_StaffBroker_Children> _AP_StaffBroker_Childrens;
 		
-		private EntitySet<AP_StaffBroker_Ministry> _AP_StaffBroker_Ministries;
-		
 		private EntityRef<User2> _User2;
 		
 		private EntityRef<User> _User;
@@ -1727,7 +1725,6 @@ namespace StaffBroker
 		{
 			this._AP_StaffBroker_StaffProfiles = new EntitySet<AP_StaffBroker_StaffProfile>(new Action<AP_StaffBroker_StaffProfile>(this.attach_AP_StaffBroker_StaffProfiles), new Action<AP_StaffBroker_StaffProfile>(this.detach_AP_StaffBroker_StaffProfiles));
 			this._AP_StaffBroker_Childrens = new EntitySet<AP_StaffBroker_Children>(new Action<AP_StaffBroker_Children>(this.attach_AP_StaffBroker_Childrens), new Action<AP_StaffBroker_Children>(this.detach_AP_StaffBroker_Childrens));
-			this._AP_StaffBroker_Ministries = new EntitySet<AP_StaffBroker_Ministry>(new Action<AP_StaffBroker_Ministry>(this.attach_AP_StaffBroker_Ministries), new Action<AP_StaffBroker_Ministry>(this.detach_AP_StaffBroker_Ministries));
 			this._User2 = default(EntityRef<User2>);
 			this._User = default(EntityRef<User>);
 			this._AP_StaffBroker_StaffType = default(EntityRef<AP_StaffBroker_StaffType>);
@@ -1932,19 +1929,6 @@ namespace StaffBroker
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AP_StaffBroker_Staff_AP_StaffBroker_Ministry", Storage="_AP_StaffBroker_Ministries", ThisKey="StaffId", OtherKey="MinistryDirectorID")]
-		public EntitySet<AP_StaffBroker_Ministry> AP_StaffBroker_Ministries
-		{
-			get
-			{
-				return this._AP_StaffBroker_Ministries;
-			}
-			set
-			{
-				this._AP_StaffBroker_Ministries.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User2_AP_StaffBroker_Staff", Storage="_User2", ThisKey="UserId2", OtherKey="UserID", IsForeignKey=true)]
 		public User2 User2
 		{
@@ -2086,18 +2070,6 @@ namespace StaffBroker
 		}
 		
 		private void detach_AP_StaffBroker_Childrens(AP_StaffBroker_Children entity)
-		{
-			this.SendPropertyChanging();
-			entity.AP_StaffBroker_Staff = null;
-		}
-		
-		private void attach_AP_StaffBroker_Ministries(AP_StaffBroker_Ministry entity)
-		{
-			this.SendPropertyChanging();
-			entity.AP_StaffBroker_Staff = this;
-		}
-		
-		private void detach_AP_StaffBroker_Ministries(AP_StaffBroker_Ministry entity)
 		{
 			this.SendPropertyChanging();
 			entity.AP_StaffBroker_Staff = null;
@@ -8099,24 +8071,22 @@ namespace StaffBroker
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _ID;
+		private int _MinistryId;
 		
-		private string _Name;
+		private string _MinistryName;
 		
 		private bool _FinancialOversightFlag;
 		
 		private int _MinistryDirectorID;
 		
-		private EntityRef<AP_StaffBroker_Staff> _AP_StaffBroker_Staff;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
+    partial void OnMinistryIdChanging(int value);
+    partial void OnMinistryIdChanged();
+    partial void OnMinistryNameChanging(string value);
+    partial void OnMinistryNameChanged();
     partial void OnFinancialOversightFlagChanging(bool value);
     partial void OnFinancialOversightFlagChanged();
     partial void OnMinistryDirectorIDChanging(int value);
@@ -8125,46 +8095,45 @@ namespace StaffBroker
 		
 		public AP_StaffBroker_Ministry()
 		{
-			this._AP_StaffBroker_Staff = default(EntityRef<AP_StaffBroker_Staff>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MinistryId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MinistryId
 		{
 			get
 			{
-				return this._ID;
+				return this._MinistryId;
 			}
 			set
 			{
-				if ((this._ID != value))
+				if ((this._MinistryId != value))
 				{
-					this.OnIDChanging(value);
+					this.OnMinistryIdChanging(value);
 					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
+					this._MinistryId = value;
+					this.SendPropertyChanged("MinistryId");
+					this.OnMinistryIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string Name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MinistryName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string MinistryName
 		{
 			get
 			{
-				return this._Name;
+				return this._MinistryName;
 			}
 			set
 			{
-				if ((this._Name != value))
+				if ((this._MinistryName != value))
 				{
-					this.OnNameChanging(value);
+					this.OnMinistryNameChanging(value);
 					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
+					this._MinistryName = value;
+					this.SendPropertyChanged("MinistryName");
+					this.OnMinistryNameChanged();
 				}
 			}
 		}
@@ -8200,49 +8169,11 @@ namespace StaffBroker
 			{
 				if ((this._MinistryDirectorID != value))
 				{
-					if (this._AP_StaffBroker_Staff.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMinistryDirectorIDChanging(value);
 					this.SendPropertyChanging();
 					this._MinistryDirectorID = value;
 					this.SendPropertyChanged("MinistryDirectorID");
 					this.OnMinistryDirectorIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AP_StaffBroker_Staff_AP_StaffBroker_Ministry", Storage="_AP_StaffBroker_Staff", ThisKey="MinistryDirectorID", OtherKey="StaffId", IsForeignKey=true)]
-		public AP_StaffBroker_Staff AP_StaffBroker_Staff
-		{
-			get
-			{
-				return this._AP_StaffBroker_Staff.Entity;
-			}
-			set
-			{
-				AP_StaffBroker_Staff previousValue = this._AP_StaffBroker_Staff.Entity;
-				if (((previousValue != value) 
-							|| (this._AP_StaffBroker_Staff.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._AP_StaffBroker_Staff.Entity = null;
-						previousValue.AP_StaffBroker_Ministries.Remove(this);
-					}
-					this._AP_StaffBroker_Staff.Entity = value;
-					if ((value != null))
-					{
-						value.AP_StaffBroker_Ministries.Add(this);
-						this._MinistryDirectorID = value.StaffId;
-					}
-					else
-					{
-						this._MinistryDirectorID = default(int);
-					}
-					this.SendPropertyChanged("AP_StaffBroker_Staff");
 				}
 			}
 		}

@@ -71,7 +71,6 @@
       <Column Name="PortalId" Type="System.Int32" DbType="int" CanBeNull="true" />
       <Association Name="AP_StaffBroker_Staff_AP_StaffBroker_StaffProfile" Member="AP_StaffBroker_StaffProfiles" ThisKey="StaffId" OtherKey="StaffId" Type="AP_StaffBroker_StaffProfile" />
       <Association Name="AP_StaffBroker_Staff_AP_StaffBroker_Children" Member="AP_StaffBroker_Childrens" ThisKey="StaffId" OtherKey="StaffId" Type="AP_StaffBroker_Children" />
-      <Association Name="AP_StaffBroker_Staff_AP_StaffBroker_Ministry" Member="AP_StaffBroker_Ministries" ThisKey="StaffId" OtherKey="MinistryDirectorID" Type="AP_StaffBroker_Ministry" />
       <Association Name="User2_AP_StaffBroker_Staff" Member="User2" ThisKey="UserId2" OtherKey="UserID" Type="User2" IsForeignKey="true" />
       <Association Name="User_AP_StaffBroker_Staff" Member="User" ThisKey="UserId1" OtherKey="UserID" Type="User" IsForeignKey="true" />
       <Association Name="AP_StaffBroker_StaffType_AP_StaffBroker_Staff" Member="AP_StaffBroker_StaffType" ThisKey="StaffTypeId" OtherKey="StaffTypeId" Type="AP_StaffBroker_StaffType" IsForeignKey="true" />
@@ -370,11 +369,10 @@
   </Table>
   <Table Name="dbo.AP_StaffBroker_Ministries" Member="AP_StaffBroker_Ministries">
     <Type Name="AP_StaffBroker_Ministry">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MinistryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MinistryName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="FinancialOversightFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="MinistryDirectorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="AP_StaffBroker_Staff_AP_StaffBroker_Ministry" Member="AP_StaffBroker_Staff" ThisKey="MinistryDirectorID" OtherKey="StaffId" Type="AP_StaffBroker_Staff" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.Agape_Main_AlterUserName" Method="Agape_Main_AlterUserName">
