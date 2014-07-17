@@ -187,10 +187,9 @@ public class StaffBrokerFunctions
         }
         catch
         {
-            return true; //If this fails, always require extra approval 
+            return false; 
         }
     }
-
 
     static public int getDirectorFor(string CostCenter, int defaultDirector)
     {
