@@ -146,7 +146,7 @@ header #loginContainer{
 
 header{
 	background:#0079c1;
-	height:154px;
+	/*height:154px;*/
 	border-bottom:1px solid #218ac9;
 	margin-bottom:48px;
 	
@@ -160,7 +160,7 @@ header .middle{
 
 header .menu_bg{
 	background:#005e90;
-	height:48px;
+	/*height:48px;*/
 	position:relative;
 	top:22px;
 	border-top:thin solid #218ac9;
