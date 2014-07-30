@@ -99,16 +99,21 @@
 		<div class='menu_bg'>
             <div class="navbar">
                 <div class="navbar-inner">
-                    <%--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>--%>
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>
                     <%--removed Bootstrap classes 'nav-collapse and collapse' from tag ID navddt so that the menu wouldn't collapse on smaller screen resoultions--%>
-                    <div ID="navddt" class="menu-dropdown pull-right">
+                    <%--removed this class = menu-dropdown to enable mobile responsiveness from ID=navddt--%>
+                    <div ID="navddt" class="nav-collapse collapse pull-right">
                         <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
                     </div><!-- END menu-dropdown -->
                 </div><!-- END navbar-inner -->
 			</div><!-- END navbar -->
 		</div>
 	</header>
-	<div id="ContentPane" runat="server"  ></div>
+    <div class="container">
+        <div class="row-fluid">
+            <div id="ContentPane" class='contentPane' runat="server"  ></div>
+        </div><!-- container added for mobile -->
+    </div><!-- row-flued added for mobile -->
 	<footer>
 		<div class='bottom'>
 			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /><a class='privacy' href='#'><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
