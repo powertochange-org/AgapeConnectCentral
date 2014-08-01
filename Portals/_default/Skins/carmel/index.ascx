@@ -99,7 +99,7 @@
 		<div class='menu_bg'>
             <div class="navbar">
                 <div class="navbar-inner">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>
+                    <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</button>
                     <%--removed Bootstrap classes 'nav-collapse and collapse' from tag ID navddt so that the menu wouldn't collapse on smaller screen resoultions--%>
                     <%--removed this class = menu-dropdown to enable mobile responsiveness from ID=navddt--%>
                     <div ID="navddt" class="nav-collapse collapse pull-right">
