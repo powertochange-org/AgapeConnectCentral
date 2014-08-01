@@ -1,4 +1,4 @@
-<ul class="nav ">
+<ul class="nav navbar-nav">
 [*>NODE]
 </ul>
 [>NODE]
@@ -9,7 +9,7 @@
 		<a href="#" [?NODE] [/?]>[=TEXT] [?NODE]<b class="caret hidden-desktop pull-right icon-chevron-down icon-white"></b>[/?]</a>
 	[/?]
 	[?NODE]
-	    <ul class="dropdown-menu">
+	    <ul class="dropdown-menu" role="menu">
 	    [*>NODE]
 	    </ul>
 	[/?]

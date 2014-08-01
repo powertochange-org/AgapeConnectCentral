@@ -98,9 +98,9 @@
 		</div>
 		<div class='menu_bg'>
             <div class="navbar">
-                <div class="navbar-inner">
-                    <div class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</div>
-                    <div ID="navddt" class="nav-collapse collapse pull-right">
+                <div class="navbar-inner container-fluid">
+                    <button type="button" class="btn navbar-toggle btn-navbar" data-toggle="collapse" data-target="#navddt">Menu</button>
+                    <div ID="navddt" class="navbar-collapse collapse pull-right">
                         <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
                     </div><!-- END menu-dropdown -->
                 </div><!-- END navbar-inner -->
