@@ -98,11 +98,9 @@
 		</div>
 		<div class='menu_bg'>
             <div class="navbar">
-                <div class="navbar-inner">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</button>
-                    <%--removed Bootstrap classes 'nav-collapse and collapse' from tag ID navddt so that the menu wouldn't collapse on smaller screen resoultions--%>
-                    <%--removed this class = menu-dropdown to enable mobile responsiveness from ID=navddt--%>
-                    <div ID="navddt" class="nav-collapse collapse pull-right">
+                <div class="navbar-inner container-fluid">
+                    <button type="button" class="btn navbar-toggle btn-navbar" data-toggle="collapse" data-target="#navddt">Menu</button>
+                    <div ID="navddt" class="navbar-collapse collapse pull-right">
                         <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
                     </div><!-- END menu-dropdown -->
                 </div><!-- END navbar-inner -->
