@@ -100,7 +100,7 @@
             <div class="navbar">
                 <div class="navbar-inner container-fluid">
                     <button type="button" class="btn navbar-toggle btn-navbar" data-toggle="collapse" data-target="#navddt">Menu</button>
-                    <div ID="navddt" class="navbar-collapse collapse pull-right">
+                    <div ID="navddt" class="navbar-collapse collapse pull-right" style="cursor:pointer">
                         <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
                     </div><!-- END menu-dropdown -->
                 </div><!-- END navbar-inner -->
