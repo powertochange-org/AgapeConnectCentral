@@ -15,7 +15,7 @@ $(document).ready(function () {
         // had to add this function for desktop users when the screen is resized to remove classes and attr that 
         // broke the menu from displaying child links when hovering over the parent -- samj
         if ($(window).height() > 980 || $(window).width() > 980) {
-            $('.nav-collapse').removeClass('in');
+            $('.navbar-collapse').removeClass('in');
             $('.dropdown-menu').removeAttr('style');
         }
     });

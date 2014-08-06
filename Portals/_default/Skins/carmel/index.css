@@ -559,18 +559,22 @@ span.menu_link {
 
 /* for Simple Menu, see Simple menu folder */
 
-    .navbar{margin-bottom:0!important;
-            /*width: 1000px;*/
-            width: auto;
-            margin: 0 auto!important; 
-            overflow:visible;
+    .navbar{
+        margin-bottom: 0!important;
+        /* width: 1000px; */
+        width: auto;
+        margin: 0 auto!important;
+        overflow: visible;
+        height: auto!important;
+        border: 0 transparent!important;
+        min-height: 0!important;
     }
     .navbar-inner{border:none!important; box-shadow:none!important; background:none transparent!important; padding-right:0!important;}
         .navbar .brand {padding:0!important;}
 
     /* Site Navigation */
     /*.menu-dropdown {*/
-    .nav-collapse {
+    .navbar-collapse {
 	    float: right;
         position: relative;
         /* top: 18px; */
@@ -624,7 +628,7 @@ span.menu_link {
         padding: 0 23px!important;
         color: #ffffff!important;
         font-family: 'Open Sans', sans-serif;
-        float: left;
+        /*float: left;*/
         position: relative;
         padding-top: 17px!important;
         top: -1px;
@@ -650,6 +654,7 @@ span.menu_link {
         width:30px!important; line-height:30px!important; min-height:30px!important; height:auto;
         display:inline-block;
         margin:0!important;
+        margin-left: 1em!important;
         border-radius:3px;
     }
     .nav > li > a .caret.hidden-desktop:hover {
@@ -692,20 +697,20 @@ span.menu_link {
 		
 	}
 	
-    .nav-collapse:not(.in) .nav li:hover > ul { 
+    .navbar-collapse:not(.in) .nav li:hover > ul { 
 		display:block;
 	}
     /*.nav li:hover > ul { 
 		display:block;
 	}*/
-    .nav-collapse .nav li > iframe{ display: none;z-index: 1 !important;}
-    .nav-collapse:not(.in) .nav li:hover > iframe{ display: block;}
+    .navbar-collapse .nav li > iframe{ display: none;z-index: 1 !important;}
+    .navbar-collapse:not(.in) .nav li:hover > iframe{ display: block;}
 
     .navbar .nav > li > .dropdown-menu:before{
         border:none!important;
     }
 	
-    .navbar .nav > li > .dropdown-menu:after {
+    .navbar-collapse:not(.in) .nav > li > .dropdown-menu:after {
 		position:absolute!important;
 		top:-15px!important; 
 		left:20px!important;
@@ -748,7 +753,7 @@ span.menu_link {
         background-image:none!important;
         color:#DD0000!important;
     }
-    .nav-collapse:not(.in) .nav .dropdown-menu{
+    .navbar-collapse:not(.in) .nav .dropdown-menu{
         border-radius:0!important;
     }
     .nav > li > ul li:hover {
@@ -765,7 +770,7 @@ span.menu_link {
 	}
 
     /* Navigation button on mobile size */
-    .nav-collapse.in {
+    .navbar-collapse.in {
         width:100%;
     }
     .navbar .btn-navbar {
@@ -777,11 +782,17 @@ span.menu_link {
             background-image: linear-gradient(to bottom, #333333, #333333)!important;
         cursor:pointer;
         margin-top:10px!important;
+        color: #ffffff;
     }
     .navbar .btn-navbar:hover,
     .navbar .btn-navbar:active {
         background:linear-gradient(to bottom, #2D2D2D 0%, #565656 100%)!important;
     }
+
+    .hidden-desktop {
+        display: none !important;
+    }
+
     /*------------------------------------------------*/
 /* END OF NAVIGATION */
 /*------------------------------------------------*/
@@ -846,3 +857,30 @@ margin: 15px 0;
 /*------------------------------------------------*/
 /* END of Staff Apps Button*/
 /*------------------------------------------------*/
+
+@media (max-width: 979px){
+    .navbar-collapse .nav>li {
+        float: none;
+    }
+    .hidden-desktop {
+        display: inherit !important;
+    }
+    .navbar-collapse .dropdown-menu {
+        position: static;
+        top: auto;
+        left: auto;
+        float: none;
+        display: none;
+        max-width: none;
+        margin: 0 15px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
