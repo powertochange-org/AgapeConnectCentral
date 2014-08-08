@@ -97,14 +97,16 @@
            
 		</div>
 		<div class='menu_bg'>
-            <div class="navbar">
-                <div class="navbar-inner container-fluid">
-                    <button type="button" class="btn navbar-toggle btn-navbar" data-toggle="collapse" data-target="#navddt">Menu</button>
-                    <div ID="navddt" class="navbar-collapse collapse pull-right" style="cursor:pointer">
-                        <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
-                    </div><!-- END menu-dropdown -->
-                </div><!-- END navbar-inner -->
-			</div><!-- END navbar -->
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-inner">
+                        <button type="button" class="btn navbar-toggle btn-navbar" data-toggle="collapse" data-target="#navddt">Menu</button>
+                        <div ID="navddt" class="navbar-collapse collapse pull-right" >
+                            <ddr:MENU ID="bootstrapNav" MenuStyle="bootstrapNav" runat="server"></ddr:MENU>
+                        </div><!-- END menu-dropdown -->
+                    </div><!-- END navbar-inner -->
+                </div><!-- END container-fluid -->
+			</nav><!-- END navbar -->
 		</div>
 	</header>
     <div class="container">
