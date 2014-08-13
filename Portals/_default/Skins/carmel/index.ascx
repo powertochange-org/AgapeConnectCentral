@@ -35,6 +35,25 @@
               Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
                   setUpMyTabs();
               });
+
+              // handle touch events bug in iOS 6 which causes menu to collapse when scrolling down the menu
+              document.getElementById('navddt').addEventListener('touchend', function (e) {
+                  var menuContainer = document.getElementById('navddt');
+                  console.log('in event: ' + e.target.id + '  menuContainer = ' + menuContainer.id);
+                  if (e.target.id === menuContainer.id) {
+                      //alert('in touch function ==' + e.currentTarget.id + ' ---test concat');
+                      menuContainer.classList.add('in');
+                      //console.log('removing class in');
+                      alert('added class in to navddt');
+                      console.log('before collapse show  id= ' + menuContainer.id);
+                      $('.collapse').css("color", "green");
+                      console.log('collapse show called');
+                  }
+
+              }, false);
+              var testTag = $(".dsentitygridsummary");
+              //testTag.css("border", "red solid thin");
+              console.log('anything happening in scrip.js  ' + testTag.height());
           });
 
 
@@ -119,4 +138,4 @@
 			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /><a class='privacy' href='#'><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
 		</div>
 	</footer>
-
+<%--<script src="Portals/_default/Skins/carmel/js/scripts.js" type="text/javascript"></script>--%>
