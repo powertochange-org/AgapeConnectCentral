@@ -805,7 +805,7 @@ header .button.related {
 background: #f58220;
 border: 1px solid #eb8528;
 cursor: default;
-z-index: 9991;
+z-index: 999;
 position: relative;
 }
 
@@ -834,7 +834,7 @@ margin-top: 10px;
     top: 37px;
     /*width: 300px;
     height: 300px;*/
-    z-index: 9990;
+    z-index: 998;
     border: 1px solid rgb(214, 215, 212);
     display: none;
     position: absolute;
