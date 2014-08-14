@@ -42,11 +42,12 @@
                   console.log('in event: ' + e.target.id + '  menuContainer = ' + menuContainer.id);
                   if (e.target.id === menuContainer.id) {
                       //alert('in touch function ==' + e.currentTarget.id + ' ---test concat');
-                      e.stopPropagation();
+                      
                       menuContainer.classList.add('in');
                       console.log('adding class in');
                       $('#navddt').collapse('show');
                       console.log('no collapse exception');
+                      e.stopImmediatePropagation();
                       //alert('added class in to navddt');
                       //console.log('before collapse show  id= ' + menuContainer.id);
                       //$('.collapse').css("color", "green");
