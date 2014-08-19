@@ -561,7 +561,6 @@ span.menu_link {
 
     .navbar{
         margin-bottom: 0!important;
-        /* width: 1000px; */
         width: auto;
         margin: 0 auto!important;
         overflow: visible;
@@ -852,7 +851,6 @@ margin: 15px 0;
     display: inline-block;
     float: right;
     position: relative;
-    min-width: 302px;
 }
 /*------------------------------------------------*/
 /* END of Staff Apps Button*/
@@ -882,5 +880,10 @@ margin: 15px 0;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
+    }
+}
+@media (min-width: 992px) {
+    .navbar {
+        width: 1000px;
     }
 }

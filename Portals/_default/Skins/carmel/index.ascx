@@ -126,8 +126,8 @@
     <div class="container">
         <div class="row-fluid">
             <div id="ContentPane" class='contentPane' runat="server"  ></div>
-        </div><!-- container added for mobile -->
-    </div><!-- row-flued added for mobile -->
+        </div><!-- row-fluid added for mobile -->
+    </div><!-- container added for mobile -->
 	<footer>
 		<div class='bottom'>
 			<div class='copy'><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" /><a class='privacy' href='#'><dnn:PRIVACY runat="server" id="dnnPRIVACY" /></a></div>
