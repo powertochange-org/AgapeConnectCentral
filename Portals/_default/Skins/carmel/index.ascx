@@ -79,13 +79,13 @@
                             <ul class="popupMenu">
                                 <table>
                                     <tbody>
-                                        <tr><td style="border:0;"> <a href="https://absences.powertochange.org"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Absence-Tracker-Icon.png" alt="Absence Tracker"></a></td>
-                                            <td style="border:0;"> <a href="/reports/"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Reports-Icon.png" alt="Reports"></a></td>
-                                            <td style="border:0;"> <a href="/wp-admin/admin.php?page=s2"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/My-Settings-Icon.png" alt="My Settings"></a></td>
+                                        <tr><td style="border:0;"> <a href="https://absences.powertochange.org"> <img src="https://staff.powertochange.org/wp-content/images/Absence-Tracker-Icon.png" alt="Absence Tracker"></a></td>
+                                            <td style="border:0;"> <a href="/reports/"> <img src="https://staff.powertochange.org/wp-content/images/Reports-Icon.png" alt="Reports"></a></td>
+                                            <td style="border:0;"> <a href="/wp-admin/admin.php?page=s2"> <img src="https://staff.powertochange.org/wp-content/images/My-Settings-Icon.png" alt="My Settings"></a></td>
                                         </tr>
-                                        <tr><td style="border:0;"> <a href="/staff-directory/"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Staff-Directory-Icon.png" alt="Staff Directory"></a></td>
-                                            <td style="border:0;"> <a href="mailto:helpdesk@powertochange.org"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/HelpDesk-Icon.png" alt="Help Desk"></a></td>
-                                            <td style="border:0;"> <a href="https://wiki.powertochange.org/help"> <img src="https://staff.powertochange.org/wp-content/themes/carmel/img/Self-Help-Wiki-Icon.png" alt="Self-Help Wiki"></a></td>
+                                        <tr><td style="border:0;"> <a href="/staff-directory/"> <img src="https://staff.powertochange.org/wp-content/images/Staff-Directory-Icon.png" alt="Staff Directory"></a></td>
+                                            <td style="border:0;"> <a href="mailto:helpdesk@powertochange.org"> <img src="https://staff.powertochange.org/wp-content/images/HelpDesk-Icon.png" alt="Help Desk"></a></td>
+                                            <td style="border:0;"> <a href="https://wiki.powertochange.org/help"> <img src="https://staff.powertochange.org/wp-content/images/Self-Help-Wiki-Icon.png" alt="Self-Help Wiki"></a></td>
                                         </tr>
                                     </tbody>
                                 </table>
