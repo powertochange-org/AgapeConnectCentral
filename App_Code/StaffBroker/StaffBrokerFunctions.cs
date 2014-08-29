@@ -6,6 +6,10 @@ using DotNetNuke;
 using System.Net;
 using System.Text.RegularExpressions;
 using DotNetNuke.Services.FileSystem;
+using System.Web.UI.WebControls;
+using DotNetNuke.Entities.Portals;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 public static class MenuLinkType
 {
@@ -239,6 +243,18 @@ public class StaffBrokerFunctions
 
         }
         return 1;
+    }
+
+    // This function returns the exchange rate based on from and to currency
+    public static decimal GetExchangeRate(string fromCurrency, string toCurrency)
+    {
+        WebClient web = new WebClient();
+
+        string url = string.Format("http://download.finance.yahoo.com/d/quotes.csv?s={0}{1}=X&f=l1", fromCurrency.ToUpper(), toCurrency.ToUpper());
+
+        string response = web.DownloadString(url);
+        // Return the rate
+        return System.Convert.ToDecimal(response);
     }
 
     static public Boolean VerifyCostCenter(int PortalId, string costCenter)
@@ -847,5 +863,7 @@ static public string GetDeptPhotoByFileId(int fileId)
            return DotNetNuke.Services.FileSystem.FileManager.Instance.GetUrl(theFile);
        return "/images/no_avatar.gif";
     }
+
+
 
 }
