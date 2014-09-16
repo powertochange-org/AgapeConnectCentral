@@ -825,3 +825,28 @@ margin: 15px 0;
 /*------------------------------------------------*/
 /* END of Staff Apps Button*/
 /*------------------------------------------------*/
+
+.curDetails{
+    font-size:9pt; 
+}
+
+.curDetails th {
+    background-color:green;
+    font-size:8pt;
+    font-weight:100;
+    padding:5px;
+    color:white;
+    border-top-right-radius:8px;
+    border-top-left-radius:8px;
+}
+
+.curDetails .footer {
+    background-color:green;
+    text-align:center;
+    padding:5px;
+    font-size:8pt;
+    font-weight:100;
+    color:white;
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
+}
