@@ -831,7 +831,7 @@ margin: 15px 0;
 }
 
 .curDetails th {
-    background-color:green;
+    background-color:rgba(2,139,255,1);
     font-size:8pt;
     font-weight:100;
     padding:5px;
@@ -841,7 +841,7 @@ margin: 15px 0;
 }
 
 .curDetails .footer {
-    background-color:green;
+    background-color:rgba(2,139,255,1);
     text-align:center;
     padding:5px;
     font-size:8pt;
