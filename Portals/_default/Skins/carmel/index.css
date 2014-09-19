@@ -348,20 +348,26 @@ footer .copy{
     -webkit-border-radius:5px;
 }
 
-.ui-state-default{
+.ui-state-default {
 	background-color:#f8f8f8;
 	padding:5px;
-	border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+    -moz-border-radius-topleft:10px;
+    -moz-border-radius-topright:10px;
+    -webkit-border-top-left-radius:10px;
+    -webkit-border-top-right-radius:10px;
 }
 
 .ui-state-active {
 	background-color:#0079c1;
 	padding:5px;
-	border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+    -moz-border-radius-topleft:10px;
+    -moz-border-radius-topright:10px;
+    -webkit-border-top-left-radius:10px;
+    -webkit-border-top-right-radius:10px;
 }
 
 .ui-state-active a {
@@ -438,6 +444,8 @@ footer .copy{
 	display:block;
 	overflow:auto;
 	height:280px;
+    border-left:1px solid #0079c1;
+    margin-top:-10px;
 }
 
 /* Autocomplete
