@@ -836,6 +836,8 @@ margin: 15px 0;
 
 .curDetails{
     font-size:9pt; 
+    margin-top:-50px;
+    margin-bottom:-50px;
 }
 
 .curDetails th {
