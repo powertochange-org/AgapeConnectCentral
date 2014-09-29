@@ -17,8 +17,8 @@ a:hover{
 
 .aspNetDisabled, a.aspNetDisabled, .dnnDisabled, a.dnnDisabled {
     /*color: rgba(53, 113, 186, 0.75);*/
-    color:lightgrey;
-    background-color: transparent;
+    color:darkGrey;
+    /*background-color: #DDD;*/
 }
 
 .aspNetDisabled.ui-state-hover {
@@ -868,8 +868,11 @@ margin: 15px 0;
 }
 
 #btnNewRmb {
-    background-color:#0079c1;
+    background-color:#004974;
     color:#FFFFFF;
+    min-width:200px;
+    padding:7 15 7 15;
+    margin-bottom: 5px; 
 }
 
 .explanation {
@@ -881,3 +884,8 @@ margin: 15px 0;
 .highlight {
     background-color:yellow;
 }
+
+#accordion .dnnGridAltItem td, #accordion .dnnGridItem td{
+    border-right:none;
+}
+
