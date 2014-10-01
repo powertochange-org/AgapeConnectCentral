@@ -49,9 +49,8 @@
         $.ajax({
             type: "POST",
             url: "https://apps.powertochange.org/DesktopModules/AgapeConnect/StaffRmb/WebService.asmx/getStaffAppsButton",
-            dataType: "xml",
             success: function (data) {
-                $('#staffAppButtonPlaceholder').replaceWith($(data).text());
+                $('#staffAppButtonPlaceholder').replaceWith(data);
             }
         });
     });
