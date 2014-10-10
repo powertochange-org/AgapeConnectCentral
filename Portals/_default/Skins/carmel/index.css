@@ -214,10 +214,6 @@ td > .dnnLabel {
 	padding:5px;
 }
 
-#dnn_ContentPane {
-    width: 1200px;
-}
-
 /*header .nav .dnn_dnnnav_ctldnnnav_spmbctr td:hover{
 	background:#0079c1;
 	}*/
@@ -809,7 +805,7 @@ span.menu_link {
     background-color:#004974;
     color:#FFFFFF;
     min-width:200px;
-    padding:7 15 7 15;
+    padding:7px 15px 7px 15px;
     margin-bottom: 5px; 
 }
 
@@ -826,4 +822,3 @@ span.menu_link {
 #accordion .dnnGridAltItem td, #accordion .dnnGridItem td{
     border-right:none;
 }
-
