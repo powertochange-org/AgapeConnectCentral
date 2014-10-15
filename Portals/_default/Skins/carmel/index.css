@@ -442,18 +442,18 @@ footer .copy{
 
 
 /*div.AcPane > div  > table > tbody, .dnn_ctr495_StaffRmb_tvProcessed{*/
-.ui-accordion-content{
+.ui-accordion-content-active{
 	display:block;
 	overflow:auto;
 	height:280px;
-    -webkit-box-shadow:  3px 0px 5px 0px rgba(0, 0, 0, 0.4);
-	box-shadow:			 3px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow:  3px 2px 8px 0px rgba(0, 0, 0, 0.4);
+	box-shadow:			 3px 2px 8px 0px rgba(0, 0, 0, 0.4);
     margin-top:-10px;
 }
 
 .ui-accordion-header-active {
-    -webkit-box-shadow:  3px 0px 5px 0px rgba(0, 0, 0, 0.4);
-	box-shadow:			 3px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow:  3px 0px 8px 0px rgba(0, 0, 100, 0.4);
+	box-shadow:			 3px 0px 8px 0px rgba(0, 0, 100, 0.4);
 }
 
 /* Autocomplete
