@@ -827,3 +827,7 @@ span.menu_link {
 #accordion .dnnGridAltItem td, #accordion .dnnGridItem td{
     border-right:none;
 }
+
+.prevent_resize {
+    resize:none;
+}
