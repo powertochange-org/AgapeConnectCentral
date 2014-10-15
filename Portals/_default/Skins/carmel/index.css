@@ -385,7 +385,7 @@ footer .copy{
 	text-decoration:underline;
 }
 
-.ui-state-focus{
+.ui-autocomplete>li>.ui-state-focus {
     border: 1px solid #999999;
     background-color: #dadada;
     border-radius:5px;
@@ -836,4 +836,8 @@ span.menu_link {
 
 .prevent_resize {
     resize:none;
+}
+
+.accounts_options {
+    background-color:rgba(114, 199, 118, 0.2);
 }
