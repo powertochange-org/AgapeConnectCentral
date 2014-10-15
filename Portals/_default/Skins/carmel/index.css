@@ -159,7 +159,7 @@ header{
 }
 
 header .middle{
-	max-width:1000px;
+	max-width: 1200px;
 	margin:0 auto;
 	padding-top:32px;
 }
@@ -173,7 +173,7 @@ header .menu_bg{
 }
 
 header .nav{
-	width:1000px;
+	width: 1200px;
 	margin:auto;
 	margin-top: 10px;
 }
@@ -223,7 +223,7 @@ footer{
 }
 
 footer .bottom{
-	width:1000px;
+	width: 1200px;
 	margin:0 auto;
 	padding:20px 0;
 
@@ -239,7 +239,7 @@ footer .bottom a{
 }
 
 footer .bottom{
-	width:1000px;
+	width: 1200px;
 	margin: auto;
 	padding:13px;
 }
@@ -306,12 +306,12 @@ footer .copy{
 }
 
 #dnn_ContentPane{
-	width:1000px;
+	width: 1200px;
 	margin:auto;
 }
 
 /*.dnnFormMessage{
-	width:1000px;
+	width: 1200px;
 	margin:auto;
 	margin-bottom:10px;
 }*/
@@ -343,7 +343,6 @@ footer .copy{
 
 .ui-tabs-nav li, .AcHdr  {
 	display:inline;
-	margin:0 10px;
 	padding:5px;
 	border-radius:5px;
     -moz-border-radius:5px;
@@ -566,7 +565,7 @@ span.menu_link {
 /* for Simple Menu, see Simple menu folder */
 
     .navbar{margin-bottom:0!important;
-            width: 1000px;
+            width: 1200px;
             margin: 0 auto!important; 
             overflow:visible;
     }
@@ -584,7 +583,7 @@ span.menu_link {
 
 .nav-menu {
     padding: 0;
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     position: relative;
     left: 0;
@@ -667,7 +666,7 @@ span.menu_link {
 		display:none;
 		position:absolute;
 		z-index: 2;
-		width:225px;
+		width:240px;
 		background:#F5F7F7;
 		border: 1px solid #cbcbcb;
 		/* CSS3 */
