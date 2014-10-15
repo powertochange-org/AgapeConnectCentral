@@ -381,8 +381,14 @@ footer .copy{
 	text-decoration:none;
 }*/
 
-.ui-state-hover{
+.ui-state-hover {
 	text-decoration:underline;
+}
+
+.ui-state-focus{
+    border: 1px solid #999999;
+    background-color: #dadada;
+    border-radius:5px;
 }
 
 .ui-state-error{
