@@ -106,9 +106,13 @@ public class StaffBrokerFunctions
         public Boolean isDelegate;
         public Boolean hasDelegated;
     }
+    
+    private static decimal USExchangeRate = 0;
+
     public StaffBrokerFunctions()
     {
     }
+
 
 
     static public void EventLog(string title, string message, int userid)
@@ -245,9 +249,19 @@ public class StaffBrokerFunctions
         return 1;
     }
 
+    public static void setUsExchangeRate(decimal rate) {
+        USExchangeRate = rate;
+    }
+
     // This function returns the exchange rate based on from and to currency
-    public static decimal GetExchangeRate(string fromCurrency, string toCurrency)
+    public static decimal GetExchangeRate(int portalId, string fromCurrency, string toCurrency)
     {
+        // US Exchange is treated differently
+        if (fromCurrency == GetSetting("AccountingCurrency", portalId) && toCurrency == "USD")
+        {
+            if (USExchangeRate != 0) return USExchangeRate;
+        }
+
         WebClient web = new WebClient();
 
         string url = string.Format("http://download.finance.yahoo.com/d/quotes.csv?s={0}{1}=X&f=l1", fromCurrency.ToUpper(), toCurrency.ToUpper());
@@ -796,7 +810,6 @@ public class StaffBrokerFunctions
 
 
     }
-
 
     static public void SetUserProfileProperty(int PortalId, int UserId, String PropertyName, String PropertyValue, int DataType = 349)
     {
