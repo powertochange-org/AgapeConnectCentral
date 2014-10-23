@@ -1,0 +1,133 @@
+﻿body {
+}
+
+.feature_image {
+    position:fixed;
+    width:90%
+}
+
+.feature_buttons {
+    position:relative;
+    padding-left:15%;
+    padding-top:50%;
+    font-size:x-large;
+}
+
+.loading_spinner {
+    padding-top:20%;
+    text-align:center;
+}
+
+.round_button {
+    height:100px;
+    width:100px;
+    border:double 5px white;
+    border-radius:55px;
+    margin:15px;
+    display:inline-block;
+    font-size:small;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.round_button .total {
+    font-weight:bold;
+    font-size:medium;
+}
+
+.round_button.draft {
+    background-color:lightgray;
+}
+
+.round_button.submitted, .round_button.pendingdirectorapproval, .round_button.pendingedmsapproval {
+    background-color:royalblue;
+}
+
+.round_button.moreinfo {
+    background-color:yellow;
+}
+
+.round_button.approved {
+    background-color:lawngreen;
+}
+
+.round_button.processing, .round_button.pendingdownload, .round_button.downloadfailed{
+    background-color:powderblue;
+}
+
+.highlight {
+    background-color:yellow;
+}
+
+/*line Details*/
+.dnnGridItem {
+    vertical-align:baseline;
+}
+
+.dnnGridAltItem {
+    background-color:mintcream;
+    vertical-align:baseline;
+}
+
+.calendar {
+    background-image: url("/Portals/_default/Skins/carmel/images/calendar.png");
+}
+
+.icon {
+    background-repeat:no-repeat;
+    width:48px;
+    height:48px;
+    margin:0;
+    padding:0;
+}
+
+.calendar span {
+    font-weight:bold;
+    font-size:18pt;
+    display:block;
+    text-align:center;
+    padding-top:10pt;
+}
+
+.calendar span.outofdate {
+    color:red;
+}
+
+.expense_type {text-align:center;}
+.expense_type.equipment.computer.hardware {background-image:url("/Portals/_default/Skins/carmel/images/equipment_computer.png");}
+.expense_type.equipment.furniture {background-image:url("/Portals/_default/Skins/carmel/images/equipment_furniture.png");}
+.expense_type.equipment.mobile.devices {background-image:url("/Portals/_default/Skins/carmel/images/equipment_mobilephone.png");}
+.expense_type.gifts.and.awards {background-image:url("/Portals/_default/Skins/carmel/images/award.png");}
+.expense_type.licenses.memberships {background-image:url("/Portals/_default/Skins/carmel/images/license.png");}
+.expense_type.meals {background-image:url("/Portals/_default/Skins/carmel/images/meals.png");}
+.expense_type.meals.per.diem {background-image:url("/Portals/_default/Skins/carmel/images/perdiem.png");}
+.expense_type.mileage {background-image:url("/Portals/_default/Skins/carmel/images/mileage.png");}
+.expense_type.mobile.phone.plans {background-image:url("/Portals/_default/Skins/carmel/images/mobileplan.png");}
+.expense_type.moving.expenses {background-image:url("/Portals/_default/Skins/carmel/images/moving.png");}
+.expense_type.postage {background-image:url("/Portals/_default/Skins/carmel/images/postage.png");}
+.expense_type.printing.and.copying {background-image:url("/Portals/_default/Skins/carmel/images/printing.png");}
+.expense_type.rent.short.term.equipment {background-image:url("/Portals/_default/Skins/carmel/images/rent.png");}
+.expense_type.repairs.and.maintenance {background-image:url("/Portals/_default/Skins/carmel/images/repairs.png");}
+.expense_type.services.consulting {background-image:url("/Portals/_default/Skins/carmel/images/consulting.png");}
+.expense_type.services.external {background-image:url("/Portals/_default/Skins/carmel/images/externalservices.png");}
+.expense_type.services.web.development {background-image:url("/Portals/_default/Skins/carmel/images/webdevelopment.png");}
+.expense_type.services.internet {background-image:url("/Portals/_default/Skins/carmel/images/internet.png");}
+.expense_type.services.marketing {background-image:url("/Portals/_default/Skins/carmel/images/marketing.png");}
+.expense_type.services.shipping.and.freight {background-image:url("/Portals/_default/Skins/carmel/images/shipping.png");}
+.expense_type.services.software.subscription {background-image:url("/Portals/_default/Skins/carmel/images/subscription.png");}
+.expense_type.services.software.purchase {background-image:url("/Portals/_default/Skins/carmel/images/software.png");}
+.expense_type.supplies.and.materials {background-image:url("/Portals/_default/Skins/carmel/images/supplies.png");}
+.expense_type.telephone {background-image:url("/Portals/_default/Skins/carmel/images/telephone.png");}
+.expense_type.training {background-image:url("/Portals/_default/Skins/carmel/images/training.png");}
+.expense_type.travel.airfare {background-image:url("/Portals/_default/Skins/carmel/images/airfare.png");}
+.expense_type.travel.lodging {background-image:url("/Portals/_default/Skins/carmel/images/lodging.png");}
+.expense_type.travel.rental.car {background-image:url("/Portals/_default/Skins/carmel/images/rentalcar.png");}
+.expense_type.travel.other {background-image:url("/Portals/_default/Skins/carmel/images/travel.png");}
+.expense_type.other.expenses {background-image:url("/Portals/_default/Skins/carmel/images/expenses.png");}
+
+
+
+.comment {
+    padding-left:20px;
+    padding-right:20px;
+}
