@@ -1,15 +1,21 @@
 ﻿body {
 }
 
+
+
 .feature_image {
-    position:fixed;
-    width:90%
+    position:relative;
+    margin-top:-10%;
+    margin-left:-10%;
+    min-width:150%;
+    min-height:150%;
+    opacity: 0.3;
 }
 
 .feature_buttons {
-    position:relative;
-    padding-left:15%;
-    padding-top:50%;
+    position:absolute;
+    left:15%;
+    top:50%;
     font-size:x-large;
 }
 
@@ -57,6 +63,10 @@
 
 .highlight {
     background-color:yellow;
+}
+
+#reimbursement_details {
+    background-color:lightblue;
 }
 
 /*line Details*/
@@ -124,8 +134,6 @@
 .expense_type.travel.rental.car {background-image:url("/Portals/_default/Skins/carmel/images/rentalcar.png");}
 .expense_type.travel.other {background-image:url("/Portals/_default/Skins/carmel/images/travel.png");}
 .expense_type.other.expenses {background-image:url("/Portals/_default/Skins/carmel/images/expenses.png");}
-
-
 
 .comment {
     padding-left:20px;
