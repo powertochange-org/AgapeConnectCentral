@@ -2,21 +2,22 @@
 }
 
 
-
-.feature_image {
-    position:relative;
-    margin-top:-10%;
-    margin-left:-10%;
-    min-width:150%;
-    min-height:150%;
-    opacity: 0.3;
+.highlight {
+    background-color:yellow;
 }
 
-.feature_buttons {
-    position:absolute;
-    left:15%;
-    top:50%;
-    font-size:x-large;
+.hidden {
+    display:none;
+}
+
+
+.feature_image {
+    position:fixed;
+    min-width:100%;
+    min-height:100%;
+    margin-top:-16px;
+    margin-left:-16px;
+    opacity:0.3;
 }
 
 .loading_spinner {
@@ -61,9 +62,6 @@
     background-color:powderblue;
 }
 
-.highlight {
-    background-color:yellow;
-}
 
 #reimbursement_details {
     background-color:lightblue;
