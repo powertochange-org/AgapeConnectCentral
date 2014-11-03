@@ -846,3 +846,15 @@ ul.jqtree_common > li.jqtree-folder > ul.jqtree_common > li.jqtree-folder > ul.j
     padding-top:10px;
     color:black;
 }
+
+table span.second_line {
+    font-size:xx-small;
+    color:#AAAAAA;
+    font-family:'serif';
+}
+
+table span.second_line.finance {
+    font-size:x-small;
+    color:#004974;
+    font-weight:600;
+}
