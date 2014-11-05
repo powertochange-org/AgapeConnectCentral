@@ -860,6 +860,11 @@ table span.second_line.finance {
     font-weight:600;
 }
 
+.finance {
+    color:#004974;
+    font-weight:bolder;
+}
+
 .ifreceipt {
     background-color:rgba(167,200,255,0.2);
 }
