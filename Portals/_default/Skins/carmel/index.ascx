@@ -59,7 +59,7 @@
 	<header>
 		<div class='top'>
 			<div id="loginContainer">
-				<dnn:USER runat="server" id="dnnUSER" />&nbsp;&nbsp;|&nbsp;&nbsp;<dnn:LOGIN runat="server" id="dnnLOGIN" />&nbsp;&nbsp;|&nbsp;&nbsp;<a id="help-link" href="#">Help</a>
+				<dnn:USER runat="server" id="dnnUSER" />&nbsp;&nbsp;|&nbsp;&nbsp;<dnn:LOGIN runat="server" id="dnnLOGIN" />&nbsp;&nbsp;
 			</div>
 			<div class='clear'></div>
 		</div>
