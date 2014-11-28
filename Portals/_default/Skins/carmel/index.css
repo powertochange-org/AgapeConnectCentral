@@ -835,16 +835,25 @@ span.menu_link {
     background-color:#99C2EB;
 }
 
+/* This allows the selected icon to appear at the right edge of the row */
 div.accounts_team div div table {
     width:100%;
 }
+/* The previous line throws the table out of alignment.  This fixes it. */
+div.accounts_team div div table tr td:nth-child(4) {
+    width:100%;
+}
 
-.currently_selected:after {
+.finance.tree {
+    text-align:left;
+}
+
+.finance.tree.currently_selected:after {
     content:url('/images/action_right.gif');
     float:right;
 }
 
-.visited {
+.finance.tree.visited {
     font-style:italic;
     border-bottom:1px dashed blue;
 }
