@@ -835,13 +835,18 @@ span.menu_link {
     background-color:#99C2EB;
 }
 
-.blue_highlight.finance {
-    border-radius:8px;
-    -webkit-border-radius:8px;
-    margin:-2px;
-    padding: 2px;
-    padding-right:10px;
-    padding-left:10px;
+div.accounts_team div div table {
+    width:100%;
+}
+
+.currently_selected:after {
+    content:url('/images/action_right.gif');
+    float:right;
+}
+
+.visited {
+    font-style:italic;
+    border-bottom:1px dashed blue;
 }
 
 #accordion .dnnGridAltItem td, #accordion .dnnGridItem td{
