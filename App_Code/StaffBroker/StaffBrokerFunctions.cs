@@ -186,7 +186,7 @@ public class StaffBrokerFunctions
     #endregion
 
 
-    static public Boolean RequiresExtraApproval(string CostCenter) {
+    static public Boolean MinistryRequiresExtraApproval(string CostCenter) {
         StaffBrokerDataContext d = new StaffBrokerDataContext();
         try
         {
