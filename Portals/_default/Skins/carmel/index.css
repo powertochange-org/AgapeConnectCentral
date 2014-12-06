@@ -835,6 +835,15 @@ span.menu_link {
     background-color:#99C2EB;
 }
 
+.error {
+    color:red;
+    font-weight:bold;
+}
+
+.required.missing {
+    background-color:rgba(255,0,0,0.3);
+}
+
 /* This allows the selected icon to appear at the right edge of the row */
 div.accounts_team div div table {
     width:100%;
