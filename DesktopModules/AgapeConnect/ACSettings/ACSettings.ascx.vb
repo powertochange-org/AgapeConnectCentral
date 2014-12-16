@@ -23,22 +23,22 @@ Namespace DotNetNuke.Modules.AgapeConnect
             lblCurrency.Text = GetSetting("Currency", PortalId)
 
 
-            Dim type = (From assembly In AppDomain.CurrentDomain.GetAssemblies()
-                From t In assembly.GetTypes()
-                Where t.Name = "DatatSync"
-                Select t).FirstOrDefault()
-            If Not type Is Nothing Then
+            'Dim type = (From assembly In AppDomain.CurrentDomain.GetAssemblies()
+            '    From t In assembly.GetTypes()
+            '    Where t.Name = "DatatSync"
+            '    Select t).FirstOrDefault()
+            'If Not type Is Nothing Then
 
 
-                Try
-                    Dim d = Activator.CreateInstance(type)
-                    lblPassword.Text = d.GetPassword()
-                Catch ex As Exception
-                    lblPassword.Text = ""
-                End Try
-            Else
-                pnlDatapump.Visible = False
-            End If
+            '    Try
+            '        Dim d = Activator.CreateInstance(type)
+            '        lblPassword.Text = d.GetPassword()
+            '    Catch ex As Exception
+            '        lblPassword.Text = ""
+            '    End Try
+            'Else
+            '    pnlDatapump.Visible = False
+            'End If
 
             Dim x = System.Globalization.CultureInfo.CurrentCulture
 
@@ -46,33 +46,33 @@ Namespace DotNetNuke.Modules.AgapeConnect
 
 
 
-            If GetSetting("Datapump", PortalId) = "Unlocked" Then
-                If GetSetting("LastPump", PortalId) = "" Then
-                    lblStatus.Text = "OK - but I have no record of a datapump successfully completing"
-                Else
-                    Dim uiCUL = CType(System.Configuration.ConfigurationManager.GetSection("system.web/globalization"), System.Web.Configuration.GlobalizationSection).UICulture
-                    Dim format As IFormatProvider = New System.Globalization.CultureInfo(uiCUL, True)
+            'If GetSetting("Datapump", PortalId) = "Unlocked" Then
+            '    If GetSetting("LastPump", PortalId) = "" Then
+            '        lblStatus.Text = "OK - but I have no record of a datapump successfully completing"
+            '    Else
+            '        Dim uiCUL = CType(System.Configuration.ConfigurationManager.GetSection("system.web/globalization"), System.Web.Configuration.GlobalizationSection).UICulture
+            '        Dim format As IFormatProvider = New System.Globalization.CultureInfo(uiCUL, True)
 
-                    Dim lastPump As Date = Date.Parse(GetSetting("LastPump", PortalId), format)
-                    Dim LastSync As String = ""
+            '        Dim lastPump As Date = Date.Parse(GetSetting("LastPump", PortalId), format)
+            '        Dim LastSync As String = ""
 
-                    If DateDiff(DateInterval.Minute, lastPump, Now) < 60 Then
-                        lblStatus.Text = "OK - Last sync was " & CInt(DateDiff(DateInterval.Minute, lastPump, Now)) & " minutes ago."
-                    ElseIf DateDiff(DateInterval.Hour, lastPump, Now) < 24 Then
-                        lblStatus.Text = "WARNING - The last successful sync was " & CInt(DateDiff(DateInterval.Hour, lastPump, Now)) & " hours ago."
-                    Else
-                        lblStatus.Text = "WARNING - The last successful sync was " & CInt(DateDiff(DateInterval.Day, lastPump, Now)) & " days ago."
-                    End If
+            '        If DateDiff(DateInterval.Minute, lastPump, Now) < 60 Then
+            '            lblStatus.Text = "OK - Last sync was " & CInt(DateDiff(DateInterval.Minute, lastPump, Now)) & " minutes ago."
+            '        ElseIf DateDiff(DateInterval.Hour, lastPump, Now) < 24 Then
+            '            lblStatus.Text = "WARNING - The last successful sync was " & CInt(DateDiff(DateInterval.Hour, lastPump, Now)) & " hours ago."
+            '        Else
+            '            lblStatus.Text = "WARNING - The last successful sync was " & CInt(DateDiff(DateInterval.Day, lastPump, Now)) & " days ago."
+            '        End If
 
-                End If
+            '    End If
 
-            ElseIf GetSetting("Datapump", PortalId).StartsWith("Error") Then
-                lblStatus.Text = GetSetting("Datapump", PortalId)
-            Else
-                lblStatus.Text = "We have not yet received a datapump request"
+            'ElseIf GetSetting("Datapump", PortalId).StartsWith("Error") Then
+            '    lblStatus.Text = GetSetting("Datapump", PortalId)
+            'Else
+            '    lblStatus.Text = "We have not yet received a datapump request"
 
 
-            End If
+            'End If
         End Sub
 
 
