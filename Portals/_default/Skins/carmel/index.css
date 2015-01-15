@@ -903,3 +903,7 @@ table span.second_line.finance {
 .ifreceipt {
     background-color:rgba(167,200,255,0.2);
 }
+
+.privAccComments {
+    background-color:rgba(255, 255, 100, 0.4);
+}
