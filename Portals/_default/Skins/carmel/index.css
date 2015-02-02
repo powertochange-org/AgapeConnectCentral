@@ -293,6 +293,10 @@ footer .copy{
     text-align: center;
 }
 
+.extra_approval {
+    color:green;
+}
+
 .my_section {
     background-color: rgba(0, 175, 0, 0.24);
     border-radius: 10px;
