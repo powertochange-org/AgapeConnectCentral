@@ -1,0 +1,8 @@
+#staff-app-container {
+	display:inline-block; 
+	position:relative; 
+	float:right; 
+	min-width:302px;
+}
+
+/* Add media query here */
