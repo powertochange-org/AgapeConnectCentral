@@ -8,6 +8,8 @@
 /* Add media query here */
 @media (max-width: 767px) {
 	#staff-app-container {
+		display:inline-block; 
+		position:relative;
 		float:none; 
 		min-width:0px;
 		margin-left: 30%;
