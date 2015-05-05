@@ -8,6 +8,7 @@
 
 .staff-app-button-styling {
 	border:0;
+	display: inline-block;
 }
 
 #staff-apps-popup-menu {
@@ -18,7 +19,7 @@
 }
 
 .staff-apps-button {
-	position:absolute; 
+	position:absolute;
 	display:none; 
 	border:1px solid rgb(214, 215, 212); 
 	padding: 10px 40px; 
@@ -39,12 +40,4 @@
 		margin-right: 30%;
 		margin-top: 0px;
 	}
-
-	.staff-app-button-styling {
-		border:0;
-		position: relative;
-		float: left;
-	}
-	
-
 }
