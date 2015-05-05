@@ -5,6 +5,28 @@
 	min-width:302px;
 }
 
+.staff-app-button-styling {
+	border:0;
+}
+
+#staff-apps-popup-menu {
+	margin:15px 0; 
+	padding:15px 0; 
+	color:#adafb2; 
+	font-size:15px;
+}
+
+.staff-apps-button {
+	position:absolute; 
+	display:none; 
+	border:1px solid rgb(214, 215, 212); 
+	padding: 10px 40px; 
+	right:10px; 
+	top:37px; 
+	z-index:900; 
+	background-color: rgb(244, 244, 244);
+}
+
 /* Add media query here */
 @media (max-width: 767px) {
 	#staff-app-container {
@@ -15,4 +37,12 @@
 		margin-left: 30%;
 		margin-right: 30%;
 	}
+
+	.staff-app-button-styling {
+		border:0;
+		position: relative;
+		float: left;
+	}
+	
+
 }
