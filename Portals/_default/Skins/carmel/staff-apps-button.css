@@ -6,3 +6,11 @@
 }
 
 /* Add media query here */
+@media (max-width: 767px) {
+	#staff-app-container {
+		float:none; 
+		min-width:0px;
+		margin-left: 30%;
+		margin-right: 30%;
+	}
+}
