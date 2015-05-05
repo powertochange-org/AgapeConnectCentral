@@ -1,8 +1,9 @@
 #staff-app-container {
 	display:inline-block; 
-	position:relative; 
+	position:static; 
 	float:right; 
 	min-width:302px;
+	margin-top: -55px;
 }
 
 .staff-app-button-styling {
