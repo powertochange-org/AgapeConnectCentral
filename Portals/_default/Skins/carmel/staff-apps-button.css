@@ -40,4 +40,9 @@
 		margin-right: 30%;
 		margin-top: 0px;
 	}
+	.staff-apps-button {
+		width: 315px;
+		padding: 10px 10px; 
+		right:-100px; 
+	}
 }
