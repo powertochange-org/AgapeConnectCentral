@@ -36,8 +36,8 @@
 		position:relative;
 		float:none; 
 		min-width:0px;
-		margin-left: 30%;
-		margin-right: 30%;
+		margin-left: auto;
+		margin-right: auto;
 		margin-top: 0px;
 	}
 	.staff-apps-button {
