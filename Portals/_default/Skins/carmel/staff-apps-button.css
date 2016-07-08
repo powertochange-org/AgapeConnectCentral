@@ -1,48 +1,49 @@
-@media all and (min-width: 768px) {
-    #staff-app-container {
-        display: inline-block;
-        position: relative;
-        float: right;
-        margin-top: 0px;
-    }
-
-    .staff-app-button-styling {
-        border: 0;
-        display: inline-block;
-    }
-
-    #staff-apps-popup-menu {
-        margin: 15px 0;
-        padding: 15px 0;
-        color: #adafb2;
-        font-size: 15px;
-    }
-
-    .staff-apps-button {
-        position: absolute;
-        display: none;
-        border: 1px solid rgb(214, 215, 212);
-        padding: 10px 40px;
-        right: 10px;
-        top: 40px;
-        min-width: 260px;
-        z-index: 900;
-        background-color: rgb(244, 244, 244);
-    }
-}
-
 #staff-app-container {
 	display:inline-block; 
-	position:relative;
-	float:none; 
-	min-width:0px;
-	margin-left: auto;
-	margin-right: auto;
+	position:relative; 
+	float:right; 
 	margin-top: 0px;
 }
+
+.staff-app-button-styling {
+	border:0;
+	display: inline-block;
+}
+
+#staff-apps-popup-menu {
+	margin:15px 0; 
+	padding:15px 0; 
+	color:#adafb2; 
+	font-size:15px;
+}
+
 .staff-apps-button {
-	width: 315px;
-	padding: 10px 10px; 
-	right:-100px; 
-	top: 37px;
+	position:absolute;
+	display:none; 
+	border:1px solid rgb(214, 215, 212); 
+	padding: 10px 40px; 
+	right:10px; 
+	top:40px; 
+    min-width:260px;
+	z-index:900; 
+	background-color: rgb(244, 244, 244);
+}
+
+/* Add media query here */
+@media all and (max-width: 767px) {
+	#staff-app-container {
+		display:inline-block; 
+		position:relative;
+		float:none; 
+		min-width:0px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0px;
+	}
+	.staff-apps-button {
+		width: 315px;
+		padding: 10px 10px; 
+		right:-100px; 
+		top: 37px;
+	}
 }
