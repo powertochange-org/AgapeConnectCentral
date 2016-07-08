@@ -30,7 +30,7 @@
 }
 
 /* Add media query here */
-@media all and (max-width: 767px) {
+@media (min-width: 1px) and (max-width: 767px) {
 	#staff-app-container {
 		display:inline-block; 
 		position:relative;
