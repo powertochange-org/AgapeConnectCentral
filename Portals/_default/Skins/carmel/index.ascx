@@ -48,7 +48,7 @@
     $(document).ready(function () {
         $.ajax({
             type: "POST",
-            url: "https://apps.powertochange.org/DesktopModules/AgapeConnect/StaffRmb/WebService.asmx/getStaffAppsButtonResponsive",
+            url: "https://staffappsbutton.powertochange.org/index.php",
             success: function (data) {
                 $('#staffAppButtonPlaceholder').replaceWith(data);
             }
