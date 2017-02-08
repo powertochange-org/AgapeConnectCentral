@@ -839,6 +839,22 @@ span.menu_link {
     background-color:#99C2EB;
 }
 
+span.moreInfo {
+    float:right;
+    width:12px;
+    height:12px;
+    background-image:url('images/info.png');
+    background-size:contain;
+}
+
+span.privComment {
+    float:right;
+    width:12px;
+    height:12px;
+    background-image:url('images/private.png');
+    background-size:contain;
+}
+
 .error {
     color:red;
     font-weight:bold;
