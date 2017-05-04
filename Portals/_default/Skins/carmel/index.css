@@ -865,7 +865,7 @@ span.extraApproval {
 
 span.subordinate.extraApproval {
     background:url('images/subordinate.png') left no-repeat,
-               url('images/plus.png') right no-repeat;
+               url('images/plus.png') 20px no-repeat;
     background-size:contain;
     padding-left:40px;
 }
