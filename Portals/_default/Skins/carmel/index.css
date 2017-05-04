@@ -855,6 +855,14 @@ span.privComment {
     background-size:contain;
 }
 
+span.subordinate {
+    float:right;
+    width:16px;
+    height:16px;
+    background-image:url('images/subordinate.png');
+    background-size:contain;
+}
+
 .error {
     color:red;
     font-weight:bold;
