@@ -293,10 +293,6 @@ footer .copy{
     text-align: center;
 }
 
-.extra_approval {
-    color:green;
-}
-
 .my_section {
     background-color: rgba(0, 175, 0, 0.24);
     border-radius: 10px;
@@ -856,9 +852,22 @@ span.privComment {
 }
 
 span.subordinate {
-    background-image:url('images/subordinate.png');
-    background-repeat:no-repeat;
+    background:url('images/subordinate.png') no-repeat;
+    background-size:contain;
     padding-left:20px;
+}
+
+span.extraApproval {
+    background:url('images/plus.png') no-repeat;
+    background-size:contain;
+    padding-left:20px;
+}
+
+span.subordinate.extraApproval {
+    background:url('images/subordinate.png') left no-repeat,
+               url('images/plus.png') right no-repeat;
+    background-size:contain;
+    padding-left:40px;
 }
 
 .error {
