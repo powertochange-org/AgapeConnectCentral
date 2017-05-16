@@ -839,6 +839,7 @@ span.moreInfo {
     float:right;
     width:12px;
     height:12px;
+    margin-top:5px
     background-image:url('images/info.png');
     background-size:contain;
 }
@@ -847,6 +848,7 @@ span.privComment {
     float:right;
     width:12px;
     height:12px;
+    margin-top:5px;
     background-image:url('images/private.png');
     background-size:contain;
 }
@@ -890,6 +892,8 @@ div.accounts_team div div table tr td:nth-child(4) {
 
 .finance.tree {
     text-align:left;
+    width:167px;
+    display:inline-block;
 }
 
 .finance.tree.currently_selected:after {
