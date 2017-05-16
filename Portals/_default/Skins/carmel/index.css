@@ -839,7 +839,7 @@ span.moreInfo {
     float:right;
     width:12px;
     height:12px;
-    margin-top:5px
+    margin-top:5px;
     background-image:url('images/info.png');
     background-size:contain;
 }
