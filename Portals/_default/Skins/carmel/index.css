@@ -560,6 +560,10 @@ span.menu_link {
     color:darkorange;
 }
 
+.foreign {
+    background-color:yellow;
+}
+
 .overdue {
     color:red;
 }
