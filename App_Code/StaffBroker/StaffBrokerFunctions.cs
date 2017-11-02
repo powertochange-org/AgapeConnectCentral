@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using DotNetNuke.Entities.Portals;
 using System.Drawing;
 using System.Drawing.Imaging;
+using Newtonsoft.Json;
 
 public static class MenuLinkType
 {
@@ -256,19 +257,29 @@ public class StaffBrokerFunctions
     // This function returns the exchange rate based on from and to currency
     public static decimal GetExchangeRate(int portalId, string fromCurrency, string toCurrency)
     {
+        if (toCurrency == GetSetting("AccountingCurrency", portalId)) {
+            return 1;
+        }
         // US Exchange is treated differently
         if (fromCurrency == GetSetting("AccountingCurrency", portalId) && toCurrency == "USD")
         {
             if (USExchangeRate != 0) return USExchangeRate;
         }
 
-        WebClient web = new WebClient();
 
-        string url = string.Format("http://download.finance.yahoo.com/d/quotes.csv?s={0}{1}=X&f=l1", fromCurrency.ToUpper(), toCurrency.ToUpper());
+        try {
+            //string url = string.Format("http://download.finance.yahoo.com/d/quotes.csv?s={0}{1}=X&f=l1", fromCurrency.ToUpper(), toCurrency.ToUpper());
+            string url = string.Format("http://api.fixer.io/latest?base={0}&symbols={1}", fromCurrency.ToUpper(), toCurrency.ToUpper());
 
-        string response = web.DownloadString(url);
-        // Return the rate
-        return System.Convert.ToDecimal(response);
+            using (WebClient web = new WebClient()) {
+                string json = web.DownloadString(url);
+                dynamic response = JsonConvert.DeserializeObject(json);
+                decimal rate = response.rates[toCurrency.ToUpper()];
+                return rate;
+            }
+        } catch (Exception ex) {
+            return 0;
+        }
     }
 
     static public Boolean VerifyCostCenter(int PortalId, string costCenter)
