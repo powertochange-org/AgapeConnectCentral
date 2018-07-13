@@ -44,18 +44,6 @@
       }(jQuery, window.Sys));
 
 </script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $.ajax({
-            type: "POST",
-            url: "https://staffappsbutton.powertochange.org/index.php",
-            success: function (data) {
-                $('#staffAppButtonPlaceholder').replaceWith(data);
-            }
-        });
-    });
-</script>
-
 	<header>
 		<div class='top'>
 			<div id="loginContainer">
@@ -66,7 +54,8 @@
 		<div class='middle'>
 			<div class='logo'>
                 <dnn:LOGO runat="server" id="dnnLOGO" />
-                <div id="staffAppButtonPlaceholder"></div>
+                <a id="staffAppsButton">Staff Apps</a>
+				<script src="https://staffappsbutton.powertochange.org/script.js"></script>
 			</div>
            
 		</div>
