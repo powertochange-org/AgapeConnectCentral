@@ -88,6 +88,7 @@ public static class AccountType
 
 public class StaffBrokerFunctions
 {
+    static private string KEY_FOR_1000_REQUESTS_PER_MONTH = "5729003fb8128e148a851101bc057fe7";
     public struct LeaderRelationship
     {
 
@@ -269,13 +270,14 @@ public class StaffBrokerFunctions
 
         try {
             //string url = string.Format("http://download.finance.yahoo.com/d/quotes.csv?s={0}{1}=X&f=l1", fromCurrency.ToUpper(), toCurrency.ToUpper());
-            string url = string.Format("http://api.fixer.io/latest?base={0}&symbols={1}", fromCurrency.ToUpper(), toCurrency.ToUpper());
+            string url = string.Format("http://data.fixer.io/latest?access_key={0}&symbols={1},{2}", KEY_FOR_1000_REQUESTS_PER_MONTH, fromCurrency.ToUpper(), toCurrency.ToUpper());
 
             using (WebClient web = new WebClient()) {
                 string json = web.DownloadString(url);
                 dynamic response = JsonConvert.DeserializeObject(json);
-                decimal rate = response.rates[toCurrency.ToUpper()];
-                return rate;
+                decimal fromRate = response.rates[fromCurrency.ToUpper()];
+                decimal toRate = response.rates[toCurrency.ToUpper()];
+                return toRate/fromRate;
             }
         } catch (Exception ex) {
             return 0;
