@@ -270,14 +270,16 @@ public class StaffBrokerFunctions
 
         try {
             //string url = string.Format("http://download.finance.yahoo.com/d/quotes.csv?s={0}{1}=X&f=l1", fromCurrency.ToUpper(), toCurrency.ToUpper());
-            string url = string.Format("http://data.fixer.io/latest?access_key={0}&symbols={1},{2}", KEY_FOR_1000_REQUESTS_PER_MONTH, fromCurrency.ToUpper(), toCurrency.ToUpper());
+            //string url = string.Format("http://data.fixer.io/latest?access_key={0}&symbols={1},{2}", KEY_FOR_1000_REQUESTS_PER_MONTH, fromCurrency.ToUpper(), toCurrency.ToUpper());
+            string url = string.Format("https://api.p2c.com/api/Finance/ExchangeRate/{0}", toCurrency.ToUpper());
 
             using (WebClient web = new WebClient()) {
                 string json = web.DownloadString(url);
                 dynamic response = JsonConvert.DeserializeObject(json);
-                decimal fromRate = response.rates[fromCurrency.ToUpper()];
+                //decimal fromRate = response.rates[fromCurrency.ToUpper()];
                 decimal toRate = response.rates[toCurrency.ToUpper()];
-                return toRate/fromRate;
+                //return toRate/fromRate;
+                return toRate;
             }
         } catch (Exception ex) {
             return 0;
